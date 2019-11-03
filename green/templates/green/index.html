@@ -287,22 +287,21 @@ html {
           </div>{% endfor %}
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
               </div>
             </div>
+
             {% for Tejeda in posts4 %}
             <img class="img-fluid" src="{{ Tejeda.image.url }}" alt="" > 
           </a> 
-                    
+                    </a>
           <div class="portfolio-caption">
             <h4>{{ Tejeda.title }}</h4>
-          <p class="text-muted">{{ Tejeda.place }}</p>
+            <p class="text-muted">{{ Tejeda.place }}</p>
           </div>{% endfor %}
         </div>
-      </div>
-    </div>
  
                   <center><a href="{% url 'green:fenixgram'  %}"><br><br>
         <button href="" type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Ver todo</button></a></center>
