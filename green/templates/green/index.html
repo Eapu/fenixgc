@@ -166,11 +166,6 @@ html {
 img {
     image-orientation: from-image;
 }
-button{
-  height:20px; 
-  position:relative; 
-  width:100px;
-   top:50%; left:50%;}
 
 </style>
 </head>
@@ -313,9 +308,13 @@ button{
         </div>
 
         <br><br>
+        <center>
+          <a href="{% url 'green:fenixgram'  %}">
+        <button href="" type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Ver todo</button></a>
+        class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
 
-<div id="wrapper">
-<button href="{% url 'green:fenixgram'  %}" class="btn btn-primary btn-xl text-uppercase" type="submit">Saber más</button></div>
+  
+</center>
       </div>
   </section>
    
