@@ -272,7 +272,7 @@ img {
             <p class="text-muted">{{ La_Cilla.place }}</p>
           </div> {% endif %}{% endfor %}
         </div>
-<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/fenixgram">Saber más</a>
+
 
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
@@ -308,17 +308,16 @@ img {
         </div>
 
         <br><br>
-        <center><a href="{% url 'green:fenixgram'  %}">
-        <button href="" type="button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">Ver todo</button></a></center>
-        class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" 
+        <center>
 
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'green:fenixgram'  %}">Saber más</a>
+</center>
       </div>
   </section>
    
    
  <center>
-<div id='map' style='width: 200px; height: 400px;'></div></center>
+<div id='map' style='width: 100%; height: 400px;'></div></center>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoicGFycXVlZm9yZXN0YWxjYiIsImEiOiJjazJhZDNnZjQyczRvM25ucmhpc3cyeG1uIn0.MnMoc6IjX7juyxHVEkwqtA';
