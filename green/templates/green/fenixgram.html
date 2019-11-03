@@ -177,50 +177,82 @@ header.masthead .intro-text {
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-            </div>
-            {% for La_Cilla in posts %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ La_Cilla.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ La_Cilla.title }}</h4>
-            <p class="text-muted">{{ La_Cilla.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
+             <!-- Galaz -->  
 
-         <!-- Degollada_del_Humo -->
-   
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+           <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal15">
             <div class="portfolio-hover">
             </div>
-            {% for Degollada_del_Humo in posts2 %}
+            {% for Galaz in posts15 %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Degollada_del_Humo.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Galaz.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
-            <h4>{{ Degollada_del_Humo.title }}</h4>
-            <p class="text-muted">{{ Degollada_del_Humo.place }}</p>
+            <h4>{{ Galaz.title }}</h4>
+            <p class="text-muted">{{ Galaz.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-       <!-- Acusa -->
+           <!-- Cueva_Corcho -->  
+
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal13">
             <div class="portfolio-hover">
             </div>
-            {% for Acusa in posts3 %}
+            {% for Cueva_Corcho in posts13 %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Acusa.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Cueva_Corcho.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
-            <h4>{{ Acusa.title }}</h4>
-            <p class="text-muted">{{ Acusa.place }}</p>
+            <h4>{{ Cueva_Corcho.title }}</h4>
+            <p class="text-muted">{{ Cueva_Corcho.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-       <!-- Tejeda -->  
+    <!-- Fuentefria -->  
+          <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal12">
+            <div class="portfolio-hover">
+            </div>
+            {% for Fuentefria in posts12 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Fuentefria.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Fuentefria.title }}</h4>
+            <p class="text-muted">{{ Fuentefria.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+        
+      
+                   <!-- Pajaritos -->  
+
+                  <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal16">
+            <div class="portfolio-hover">
+            </div>
+            {% for Pajaritos in posts16 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Pajaritos.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Pajaritos.title }}</h4>
+            <p class="text-muted">{{ Pajaritos.place }}</p>
+          </div> {% endif %}{% endfor %}
+        </div>
+             <!-- Doña_Paca -->  
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal14">
+            <div class="portfolio-hover">
+            </div>
+            {% for Doña_Paca in posts14 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Doña_Paca.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Doña_Paca.title }}</h4>
+            <p class="text-muted">{{ Doña_Paca.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+      <!-- Tejeda -->  
           <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
             <div class="portfolio-hover">
@@ -232,90 +264,6 @@ header.masthead .intro-text {
           <div class="portfolio-caption">
             <h4>{{ Tejeda.title }}</h4>
             <p class="text-muted">{{ Tejeda.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-               <!-- Lugarejos -->  
-           <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-            </div>
-            {% for Lugarejos in posts5 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Lugarejos.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Lugarejos.title }}</h4>
-            <p class="text-muted">{{ Lugarejos.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-               <!-- Las_Hoyas -->  
-            <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-            </div>
-            {% for Las_Hoyas in posts6 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Las_Hoyas.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Las_Hoyas.title }}</h4>
-            <p class="text-muted">{{ Las_Hoyas.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-               <!-- Tamadaba -->  
-            <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
-            <div class="portfolio-hover">
-            </div>
-            {% for Tamadaba in posts7 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Tamadaba.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Tamadaba.title }}</h4>
-            <p class="text-muted">{{ Tamadaba.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-                       <!-- Degollada_de_Sargento -->  
-            <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
-            <div class="portfolio-hover">
-            </div>
-            {% for Degollada_de_Sargento in posts8 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Degollada_de_Sargento.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Degollada_de_Sargento.title }}</h4>
-            <p class="text-muted">{{ Degollada_de_Sargento.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-                       <!-- Fin_del_Mundo -->  
-          <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
-            <div class="portfolio-hover">
-            </div>
-            {% for Fin_del_Mundo in posts9 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Fin_del_Mundo.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Fin_del_Mundo.title }}</h4>
-            <p class="text-muted">{{ Fin_del_Mundo.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-                       <!-- Cruz_de_Maria -->  
-          <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
-            <div class="portfolio-hover">
-            </div>
-            {% for Cruz_de_Maria in posts10 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Cruz_de_Maria.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Cruz_de_Maria.title }}</h4>
-            <p class="text-muted">{{ Cruz_de_Maria.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
                        <!-- Cuevas_del_Caballero -->  
@@ -332,79 +280,141 @@ header.masthead .intro-text {
             <p class="text-muted">{{ Cuevas_del_Caballero.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-       <!-- Fuentefria -->  
-          <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal12">
-            <div class="portfolio-hover">
-            </div>
-            {% for Fuentefria in posts12 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Fuentefria.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Fuentefria.title }}</h4>
-            <p class="text-muted">{{ Fuentefria.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-             <!-- Cueva_Corcho -->  
 
+                 <!-- La_Cilla -->
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal13">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
             </div>
-            {% for Cueva_Corcho in posts13 %}
+            {% for La_Cilla in posts %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Cueva_Corcho.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ La_Cilla.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
-            <h4>{{ Cueva_Corcho.title }}</h4>
-            <p class="text-muted">{{ Cueva_Corcho.place }}</p>
+            <h4>{{ La_Cilla.title }}</h4>
+            <p class="text-muted">{{ La_Cilla.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-             <!-- Doña_Paca -->  
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal14">
-            <div class="portfolio-hover">
-            </div>
-            {% for Doña_Paca in posts14 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Doña_Paca.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Doña_Paca.title }}</h4>
-            <p class="text-muted">{{ Doña_Paca.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
-             <!-- Galaz -->  
 
+               <!-- Las_Hoyas -->  
+            <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+            <div class="portfolio-hover">
+            </div>
+            {% for Las_Hoyas in posts6 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Las_Hoyas.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Las_Hoyas.title }}</h4>
+            <p class="text-muted">{{ Las_Hoyas.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+        <!-- Acusa -->
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+            </div>
+            {% for Acusa in posts3 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Acusa.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Acusa.title }}</h4>
+            <p class="text-muted">{{ Acusa.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+        <!-- Degollada_de_Sargento -->  
+            <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
+            <div class="portfolio-hover">
+            </div>
+            {% for Degollada_de_Sargento in posts8 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Degollada_de_Sargento.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Degollada_de_Sargento.title }}</h4>
+            <p class="text-muted">{{ Degollada_de_Sargento.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+          <!-- Lugarejos -->  
            <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal15">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
             <div class="portfolio-hover">
             </div>
-            {% for Galaz in posts15 %}
+            {% for Lugarejos in posts5 %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Galaz.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Lugarejos.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
-            <h4>{{ Galaz.title }}</h4>
-            <p class="text-muted">{{ Galaz.place }}</p>
+            <h4>{{ Lugarejos.title }}</h4>
+            <p class="text-muted">{{ Lugarejos.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-                   <!-- Pajaritos -->  
-
-                  <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal16">
+         <!-- Degollada_del_Humo -->
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
             </div>
-            {% for Pajaritos in posts16 %}
+            {% for Degollada_del_Humo in posts2 %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Pajaritos.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Degollada_del_Humo.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
-            <h4>{{ Pajaritos.title }}</h4>
-            <p class="text-muted">{{ Pajaritos.place }}</p>
+            <h4>{{ Degollada_del_Humo.title }}</h4>
+            <p class="text-muted">{{ Degollada_del_Humo.place }}</p>
           </div> {% endif %}{% endfor %}
-        </div>
+      </div>
+      <!-- Cruz_de_Maria -->  
+          <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
+            <div class="portfolio-hover">
+            </div>
+            {% for Cruz_de_Maria in posts10 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Cruz_de_Maria.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Cruz_de_Maria.title }}</h4>
+            <p class="text-muted">{{ Cruz_de_Maria.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+      
+           
+
+               <!-- Tamadaba -->  
+            <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+            <div class="portfolio-hover">
+            </div>
+            {% for Tamadaba in posts7 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Tamadaba.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Tamadaba.title }}</h4>
+            <p class="text-muted">{{ Tamadaba.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+                     
+                       <!-- Fin_del_Mundo -->  
+          <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
+            <div class="portfolio-hover">
+            </div>
+            {% for Fin_del_Mundo in posts9 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Fin_del_Mundo.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Fin_del_Mundo.title }}</h4>
+            <p class="text-muted">{{ Fin_del_Mundo.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+                      
+
+   
 
 </div>
 
@@ -484,6 +494,42 @@ header.masthead .intro-text {
       </div>
     </div>
   </div>
+
+ <!-- Modal La_Cilla -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+         <button type="button" class="close" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+              {% for La_Cilla in posts %}
+                <!-- Project Details Go Here -->
+                <h3 class="">{{ La_Cilla.title }}</h3>
+                <p class="text-muted">{{ La_Cilla.place }}</p>   
+                <img class="img-fluid d-block mx-auto" src="{{ La_Cilla.image.url }}" alt="" style="width: 100%"> 
+                <p align="justify">{{ La_Cilla.body }}</p>
+                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ La_Cilla.author }}</strong>,&nbsp;&nbsp;{{ La_Cilla.created|date:"M d, Y"  }}</p>
+                 <hr><br>
+              {% endfor %}
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fas fa-times"></i>
+                  Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Modal Acusa -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
