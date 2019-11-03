@@ -435,7 +435,7 @@ header.masthead .intro-text {
                 <!-- Project Details Go Here -->
               {% for La_Cilla in posts %}
                 <!-- Project Details Go Here -->
-                
+
                 <h3 class="">{{ La_Cilla.title|default_if_none:"&nbsp;" }}</h3>
                 <p class="text-muted">{{ La_Cilla.place|default_if_none:"&nbsp;" }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ La_Cilla.image.url }}" alt="" style="width: 100%"> 
@@ -572,7 +572,7 @@ header.masthead .intro-text {
                 <!-- Project Details Go Here -->
                 <h3 class="">{{ Lugarejos.title }}</h3>
                 <p class="text-muted">{{ Lugarejos.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
+                <img class="img-fluid d-block mx-auto" src="{{ Lugarejos.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Lugarejos.body }}</p>
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Lugarejos.author }}</strong>,&nbsp;&nbsp;{{ Lugarejos.created|date:"M d, Y"  }}</p>
                  <hr><br>
@@ -963,6 +963,31 @@ header.masthead .intro-text {
       </div>
     </div>
   </div>
+
+   <!-- Footer -->
+  <footer class="footer bg" style="background-color: #212528">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gc.png" alt="" " style="width: 15%; border-radius: 4%;margin-right: 40" >
+              <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/fred.png" alt="" " style="width: 40%; border-radius: 4%" >
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; 2019 Parque Forestal CB. Todos los derechos reservados.</p>
+        </div>
+        
+  </footer>
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
