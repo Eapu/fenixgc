@@ -298,7 +298,7 @@ img {
             </div>
 
             {% for Tejeda in posts4 %}
-            <img class="img-fluid" src="{{ Tejeda.image.url }}" alt=""  > 
+            <img class="image" src="{{ Tejeda.image.url }}" alt=""  > 
           </a> 
                    
           <div class="portfolio-caption">
@@ -747,12 +747,19 @@ map.getCanvas().style.cursor = '';
 
   <!-- Bootstrap core JavaScript -->
  <script type="text/javascript">
-   EXIF.getData(imageElement, function() {
-                var orientation = EXIF.getTag(this, "Orientation");
-
-                if(orientation == 6)
-                    $(imageElement).css('transform', 'rotate(90deg)')
-});  
+if fileType == "image":
+    exifToolCommand = "exiftool -j '%s'" % filePath
+    exif = json.loads(subprocess.check_output(shlex.split(exifToolCommand), stderr=subprocess.PIPE))
+    if 'Orientation' in exif[0]:
+        findDegrees, = re.compile("([0-9]+)").search(exif[0]['Orientation']).groups()
+        if findDegrees:
+            rotateDegrees = int(findDegrees)
+            if 'CW' in exif[0]['Orientation'] and 'CCW' not in exif[0]['Orientation']:
+                rotateDegrees = rotateDegrees * -1
+            # rotate image
+            img = Image.open(filePath)
+            img2 = img.rotate(rotateDegrees)
+            img2.save(filePath) 
  </script>
   <!-- Custom scripts for this template -->
   <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
