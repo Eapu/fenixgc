@@ -163,6 +163,9 @@ header.masthead .intro-text {
 html {
   scroll-behavior: smooth;
 }
+img {
+    image-orientation: from-image;
+}
 </style>
 </head>
 
@@ -294,7 +297,7 @@ html {
             </div>
 
             {% for Tejeda in posts4 %}
-            <img class="img-fluid" src="{{ Tejeda.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Tejeda.image.url }}" alt=""  > 
           </a> 
                    
           <div class="portfolio-caption">
@@ -725,7 +728,7 @@ map.getCanvas().style.cursor = '';
                 <!-- Project Details Go Here -->
                 <h3 class="">{{ Tejeda.title }}</h3>
                 <p class="text-muted">{{ Tejeda.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 304px"> 
+                <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Tejeda.body }}</p>
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Tejeda.author }}</strong>,&nbsp;&nbsp;{{ Tejeda.created|date:"M d, Y"  }}</p>
                  <hr><br>
