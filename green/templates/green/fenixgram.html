@@ -466,9 +466,9 @@ header.masthead .intro-text {
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ La_Cilla.author|default_if_none:"&nbsp;" }}</strong>,&nbsp;&nbsp;{{ La_Cilla.created|date:"M d, Y"|default_if_none:"&nbsp;"  }}</p>
                  <hr><br>
               {% endfor %}
-          <button type="button" class="close" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-         </button>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fa fa-times"></i>
+                  Cerrar</button>
               </div>
             </div>
           </div>
