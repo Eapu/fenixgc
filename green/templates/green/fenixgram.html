@@ -178,6 +178,27 @@ header.masthead .intro-text {
         </div>
       </div>
       <div class="row">
+
+
+                   <!-- Galaz -->  
+
+           <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal15">
+            <div class="portfolio-hover">
+            </div>
+            {% for Galaz in posts15 %}
+            {% if forloop.counter0 == 0 %}
+            <img class="img-fluid" src="{{ Galaz.image.url }}" alt="" > 
+            </a> 
+          <div class="portfolio-caption">
+            <h4>{{ Galaz.title }}</h4>
+            <p class="text-muted">{{ Galaz.place }}</p>
+          </div> {% endif %}{% endfor %}
+      </div>
+
+
+
+
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
@@ -376,21 +397,7 @@ header.masthead .intro-text {
             <p class="text-muted">{{ Doña_Paca.place }}</p>
           </div> {% endif %}{% endfor %}
       </div>
-             <!-- Galaz -->  
 
-           <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal15">
-            <div class="portfolio-hover">
-            </div>
-            {% for Galaz in posts15 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Galaz.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Galaz.title }}</h4>
-            <p class="text-muted">{{ Galaz.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
                    <!-- Pajaritos -->  
 
                   <div class="col-md-4 col-sm-6 portfolio-item">
@@ -949,7 +956,7 @@ header.masthead .intro-text {
                 <h3 class="">{{ Pajaritos.title }}</h3>
                 <p class="text-muted">{{ Pajaritos.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Pajaritos.image.url }}" alt="" style="width: 100%"> 
-                <p align="justify">{{ Galaz.body }}</p>
+                <p align="justify">{{ Pajaritos.body }}</p>
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Pajaritos.author }}</strong>,&nbsp;&nbsp;{{ Pajaritos.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
