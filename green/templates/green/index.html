@@ -166,6 +166,7 @@ html {
 img {
     image-orientation: from-image;
 }
+
 </style>
 </head>
 
@@ -745,7 +746,14 @@ map.getCanvas().style.cursor = '';
   </div>
 
   <!-- Bootstrap core JavaScript -->
- 
+ <script type="text/javascript">
+   EXIF.getData(imageElement, function() {
+                var orientation = EXIF.getTag(this, "Orientation");
+
+                if(orientation == 6)
+                    $(imageElement).css('transform', 'rotate(90deg)')
+});  
+ </script>
   <!-- Custom scripts for this template -->
   <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
 
