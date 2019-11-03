@@ -238,6 +238,7 @@ header.masthead .intro-text {
             <p class="text-muted">{{ Pajaritos.place }}</p>
           </div> {% endif %}{% endfor %}
         </div>
+
              <!-- Doña_Paca -->  
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal14">
@@ -413,20 +414,7 @@ header.masthead .intro-text {
           </div> {% endif %}{% endfor %}
       </div>
 
-                       <!-- Pajaritos -->  
-          <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal16">
-            <div class="portfolio-hover">
-            </div>
-            {% for Pajaritos in posts16 %}
-            {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Pajaritos.image.url }}" alt="" > 
-            </a> 
-          <div class="portfolio-caption">
-            <h4>{{ Pajaritos.title }}</h4>
-            <p class="text-muted">{{ Pajaritos.place }}</p>
-          </div> {% endif %}{% endfor %}
-      </div>
+ 
                  
 
    
@@ -988,8 +976,8 @@ header.masthead .intro-text {
   </div>
 
 
-           <!--Modal Doña_Paca -->
-       <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
+           <!--Modal Pajaritos -->
+      <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -1002,13 +990,13 @@ header.masthead .intro-text {
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-              {% for Galaz in posts15 %}
+              {% for Pajaritos in posts16 %}
                 <!-- Project Details Go Here -->
-                <h3 class="">{{ Galaz.title }}</h3>
-                <p class="text-muted">{{ Galaz.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ Galaz.image.url }}" alt="" style="width: 100%"> 
-                <p align="justify">{{ Galaz.body }}</p>
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Galaz.author }}</strong>,&nbsp;&nbsp;{{ Galaz.created|date:"M d, Y"  }}</p>
+                <h3 class="">{{ Pajaritos.title }}</h3>
+                <p class="text-muted">{{ Pajaritos.place }}</p>   
+                <img class="img-fluid d-block mx-auto" src="{{ Pajaritos.image.url }}" alt="" style="width: 100%"> 
+                <p align="justify">{{ Pajaritos.body }}</p>
+                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Pajaritos.author }}</strong>,&nbsp;&nbsp;{{ Pajaritos.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
