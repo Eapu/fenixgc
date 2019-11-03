@@ -326,7 +326,7 @@ header.masthead .intro-text {
             </div>
             {% for Cuevas_del_Caballero in posts11 %}
             {% if forloop.counter0 == 0 %}
-            <img class="img-fluid" src="{{ Cruz_de_Maria.image.url }}" alt="" > 
+            <img class="img-fluid" src="{{ Cuevas_del_Caballero.image.url }}" alt="" > 
             </a> 
           <div class="portfolio-caption">
             <h4>{{ Cuevas_del_Caballero.title }}</h4>
@@ -1581,7 +1581,7 @@ map.getCanvas().style.cursor = '';
               {% for Fuentefria in posts12 %}
                 <!-- Project Details Go Here -->
                 <h3 class="">{{ Fuentefria.title }}</h3>
-                <p class="text-muted">{{ Cuevas_del_Caballero.place }}</p>   
+                <p class="text-muted">{{ Fuentefria.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Fuentefria.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Fuentefria.body }}</p>
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Fuentefria.author }}</strong>,&nbsp;&nbsp;{{ Fuentefria.created|date:"M d, Y"  }}</p>
