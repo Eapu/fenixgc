@@ -128,8 +128,8 @@ USE_TZ = True
 S3UTILS_DEBUG_LEVEL=1
 AWS_STORAGE_BUCKET_NAME = 'elenacube'
 AWS_S3_REGION_NAME = 'eu-west-1'  # e.g. us-east-2
-AWS_ACCESS_KEY_ID = 'AKIARWQQDNWEJXSM6AUX'
-AWS_SECRET_ACCESS_KEY = 'tUgQJc9BFKWACGELHRLiL5CiaPlcvFi0/iu9Cz2c'
+AWS_ACCESS_KEY_ID = 'AKIARWQQDNWEFPAPJUQU'
+AWS_SECRET_ACCESS_KEY = 'HnZeIpIIaTSqsieTAIbMW2o0CcuqEszgihkrXuuB'
 
 # Tell django-storages the domain to use to refer to static files.
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
