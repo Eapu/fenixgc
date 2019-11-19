@@ -285,23 +285,18 @@ img {
             <p class="text-muted">Artenara</p>
           </div> 
         </div>
-
-
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
               </div>
-            </div>
-
-            {% for Fin_del_Mundo in posts9 %}
-            <img class="img-fluid" src="{{ Fin_del_Mundo.image.url }}" alt="" > 
-          </a> 
-                    
+            </div>  
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1.jpg" alt="" > 
+          </a>                 
           <div class="portfolio-caption">
-            <h4>{{ Fin_del_Mundo.title }}</h4>
-            <p class="text-muted">{{ Fin_del_Mundo.place }}</p>
-          </div>{% endfor %}
+            <h4>Mirador del Fin del Mundo</h4>
+            <p class="text-muted">Agaete</p>
+          </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
@@ -310,14 +305,14 @@ img {
               </div>
             </div>
 
-            {% for Tejeda in posts4 %}
-            <img class="img-fluid" src="{{ Tejeda.image.url }}" alt=""  > 
+           
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/MIRADOR_TEJEDA_FOTO1.jpg" alt=""  > 
           </a> 
                    
           <div class="portfolio-caption">
-            <h4>{{ Tejeda.title }}</h4>
-            <p class="text-muted">{{ Tejeda.place }}</p>
-          </div>{% endfor %}
+            <h4>Mirador de Tejeda</h4>
+            <p class="text-muted">Tejeda</p>
+          </div>
         </div>
 
         <br><br>
