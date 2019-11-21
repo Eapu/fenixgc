@@ -664,6 +664,9 @@ map.getCanvas().style.cursor = '';
                 <p class="text-muted">{{ La_Cilla.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ La_Cilla.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ La_Cilla.body }}</p>
+                {% if La_Cilla.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ La_Cilla.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ La_Cilla.author }}</strong>,&nbsp;&nbsp;{{ La_Cilla.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -698,6 +701,9 @@ map.getCanvas().style.cursor = '';
                 <p class="text-muted">{{ Fin_del_Mundo.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Fin_del_Mundo.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Fin_del_Mundo.body }}</p>
+                {% if Fin_del_Mundo.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Fin_del_Mundo.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Fin_del_Mundo.author }}</strong>,&nbsp;&nbsp;{{ Fin_del_Mundo.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}

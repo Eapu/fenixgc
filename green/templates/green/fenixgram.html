@@ -484,6 +484,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Degollada_del_Humo.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Degollada_del_Humo.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Degollada_del_Humo.body }}</p>
+                {% if Degollada_del_Humo.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_del_Humo.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Degollada_del_Humo.author }}</strong>,&nbsp;&nbsp;{{ Degollada_del_Humo.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -518,6 +521,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ La_Cilla.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ La_Cilla.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ La_Cilla.body }}</p>
+                {% if La_Cilla.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ La_Cilla.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ La_Cilla.author }}</strong>,&nbsp;&nbsp;{{ La_Cilla.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -553,6 +559,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Acusa.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Acusa.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Acusa.body }}</p>
+                {% if Acusa.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Acusa.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Acusa.author }}</strong>,&nbsp;&nbsp;{{ Acusa.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -587,6 +596,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Tejeda.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Tejeda.body }}</p>
+                {% if Tejeda.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Tejeda.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Tejeda.author }}</strong>,&nbsp;&nbsp;{{ Tejeda.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -620,6 +632,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Lugarejos.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Lugarejos.body }}</p>
+                {% if Lugarejos.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Lugarejos.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Lugarejos.author }}</strong>,&nbsp;&nbsp;{{ Lugarejos.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -657,6 +672,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Las_Hoyas.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Las_Hoyas.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Las_Hoyas.body }}</p>
+                {% if Las_Hoyas.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Las_Hoyas.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Las_Hoyas.author }}</strong>,&nbsp;&nbsp;{{ Las_Hoyas.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -691,6 +709,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Tamadaba.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Tamadaba.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Tamadaba.body }}</p>
+                {% if Tamadaba.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Tamadaba.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Tamadaba.author }}</strong>,&nbsp;&nbsp;{{ Tamadaba.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -727,6 +748,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Degollada_del_Sargento.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Degollada_del_Sargento.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Degollada_del_Sargento.body }}</p>
+                {% if Degollada_del_Sargento.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_del_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Degollada_del_Sargento.author }}</strong>,&nbsp;&nbsp;{{ Degollada_del_Sargento.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -761,6 +785,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Fin_del_Mundo.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Fin_del_Mundo.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Fin_del_Mundo.body }}</p>
+                {% if Fin_del_Mundo.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Fin_del_Mundo.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Fin_del_Mundo.author }}</strong>,&nbsp;&nbsp;{{ Fin_del_Mundo.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -794,6 +821,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Cruz_de_Maria.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Cruz_de_Maria.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Cruz_de_Maria.body }}</p>
+                {% if Cruz_de_Maria.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Cruz_de_Maria.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Cruz_de_Maria.author }}</strong>,&nbsp;&nbsp;{{ Cruz_de_Maria.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -827,6 +857,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Cuevas_del_Caballero.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Cuevas_del_Caballero.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Cuevas_del_Caballero.body }}</p>
+                {% if Cuevas_del_Caballero.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Cuevas_del_Caballero.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Cuevas_del_Caballero.author }}</strong>,&nbsp;&nbsp;{{ Cuevas_del_Caballero.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -860,6 +893,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Fuentefria.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Fuentefria.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Fuentefria.body }}</p>
+                 {% if Fuentefria.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Fuentefria.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Fuentefria.author }}</strong>,&nbsp;&nbsp;{{ Fuentefria.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -893,6 +929,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Cueva_Corcho.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Cueva_Corcho.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Cueva_Corcho.body }}</p>
+                {% if Cueva_Corcho.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Cueva_Corcho.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Cueva_Corcho.author }}</strong>,&nbsp;&nbsp;{{ Cueva_Corcho.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -926,6 +965,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Doña_Paca.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Doña_Paca.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Doña_Paca.body }}</p>
+                {% if Doña_Paca.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Doña_Paca.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Doña_Paca.author }}</strong>,&nbsp;&nbsp;{{ Doña_Paca.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -961,6 +1003,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Galaz.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Galaz.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Galaz.body }}</p>
+                {% if Galaz.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Galaz.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Galaz.author }}</strong>,&nbsp;&nbsp;{{ Galaz.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
@@ -996,6 +1041,9 @@ header.masthead .intro-text {
                 <p class="text-muted">{{ Pajaritos.place }}</p>   
                 <img class="img-fluid d-block mx-auto" src="{{ Pajaritos.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Pajaritos.body }}</p>
+                {% if Pajaritos.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Pajaritos.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                    {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Pajaritos.author }}</strong>,&nbsp;&nbsp;{{ Pajaritos.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
