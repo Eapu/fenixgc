@@ -732,7 +732,7 @@ map.getCanvas().style.cursor = '';
                 <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
                 <p align="justify">{{ Tejeda.body }}</p>
                 {% if Tejeda.link %}
-                    <a target="_blank" rel="noopener noreferrer" href="{{ post.link }}"><i class="fa fa-external-link-square" style="color:#39363c"> </i> </a>Go to link</p>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Tejeda.link }}"><i class="fa fa-external-link-square" style="color:#39363c"> </i> </a>Ver en mapa</p>
                     {% endif %}
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Tejeda.author }}</strong>,&nbsp;&nbsp;{{ Tejeda.created|date:"M d, Y"  }}</p>
                  <hr><br>
