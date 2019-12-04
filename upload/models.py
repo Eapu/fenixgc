@@ -16,6 +16,8 @@ TOTEM_CHOICES= [
 	('Cruz de María', 'Cruz de María'),
 	('Área Recreativa Tamadaba', 'Área Recreativa Tamadaba'),
 	('Fin del Mundo', 'Fin del Mundo'),
+	('No estoy seguro', 'No estoy seguro'),
+
 
 	]
 class Usuarios(models.Model):
