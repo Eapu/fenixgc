@@ -9,18 +9,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Fenix Gran Canaria</title>
-
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -120,9 +118,20 @@ header.masthead .intro-text {
     width: 30%;
   }
 }
+    #features {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    #map canvas {
+        cursor: crosshair;
+    }
 
-
-
+}
 
 .intro-lead-in {
   font-size: 15px;
@@ -168,9 +177,9 @@ img {
 
 }   
 
-
 .container2 {
   position: relative;
+  width: 100%;
 }
 
 .image2 {
@@ -208,6 +217,11 @@ img {
   font-size: 16px;
   padding: 16px 32px;
 }
+@media screen and (max-width: 480px) {
+    img {
+         height: 800px;
+    }
+}
 </style>
 </head>
 
@@ -218,7 +232,7 @@ img {
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        
+        Menu
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -230,7 +244,7 @@ img {
             <a class="nav-link js-scroll-trigger" href="#portfolio">Galería</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
+            <a class="nav-link js-scroll-trigger" href="#mapa">Mapa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
@@ -257,7 +271,7 @@ img {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Sobre el proyecto</h3>
+          <h2 class="section-heading text-uppercase">Sobre el proyecto</h2>
          <p> <h3 class="section-subheading text-muted">
        Es una iniciativa que tiene como fin documentar cómo se recupera el bosque de un incendio a partir de fotografías tomadas por voluntarios.</h3></p>
      
@@ -277,7 +291,7 @@ img {
             <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/foto.png" alt="" style="width: 120px"><br><br>
 
           </span><br><br>
-          <p class="text-muted">Coloca tu teléfono en los 'totems', saca una foto y compartela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook. También puedes subirla directamente <a href="{% url 'upload:create' %}"><strong> desde esta web.</strong></a> </p>
+          <p class="text-muted">Coloca tu teléfono en los 'totems' de madera, saca una foto y súbela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -286,17 +300,17 @@ img {
           </span><br><br>
           <p class="text-muted"> Recopilamos las fotos y creamos una galería y su <strong>cambio a lo largo del tiempo.</strong></p>
         </div>
-
-  </section>
-       
-         
         
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Galería</h3>
+          <h2 class="section-heading text-uppercase">Galería</h2>
           <h3 class="section-subheading text-muted"> ¡Únete con una <strong>imágen de cambio! </strong> </h3></p>
         </div>
       </div>
@@ -322,7 +336,7 @@ img {
             <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1-min.webp" alt="" > 
           </a>                 
           <div class="portfolio-caption">
-            <h4>Mirador del Fin del Mundo</h4>
+            <h4>sMirador del Fin del Mundo</h4>
             <p class="text-muted">Agaete</p>
           </div>
         </div>
@@ -355,50 +369,39 @@ img {
   </section>
    
 
-       <section class=" page-section" id="mapa">
+
+ 
+       <section class="bg-light page-section" id="mapa">
+        
+         
     <div class="container" id="mapa">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Localización</h3>
+          <h2 class="section-heading text-uppercase">Localización</h2>
           <h3 class="section-subheading text-muted"> ¡Ya tenemos <strong>15 'totems' </strong>! </h3></p>
         </div>
       </div>
     </div>
-<div class="container2" style="background-color: #78BCEC">
-  <a href="{% url 'green:indexmap' %}#mapa">
-  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/media/Group.png" alt="" style="max-width: 50%"></center>
+          
+
+ 
+<div class="container2">
+  <a href="{% url 'green:indexmap' %}#mapa"">
+  <img src="https://elenacube.s3-eu-west-1.amazonaws.com/media/mapgc.png" alt="" class="image2" style="width:100%">
   <div class="middle">
     <div class="texto">Ver mapa</div></a>
 </div>
-</section>
-
-
-
   <!-- Contact -->
-
-  <!-- Call to Action -->
+ <br><br>
+  <!-- Call to Action --><br>
   <section class="call-to-action text-dark text-center" id="contacto">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-8 mx-auto">
-                  <ul class="list-inline mb-0">
-            <h3 class="mb-4"style ="color: #343A40">Síguenos en:</h3>
-          <li class="list-inline-item mr-3">   
-            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
-            </li>
-          <li class="list-inline-item mr-3">
-          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
-            </li>
-
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
-              </a>
-            </li>
-          </ul><br>
+          <h2 class="mb-4">Suscríbete para participar</h2>
         </div>
         <div class="col-xl-8 mx-auto">
-         <h4 class="mb-4">o suscríbete para estar al día</h4>
          <form action="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
           <div class="form-row">
         <div class="col-xl-8 mx-auto">
@@ -415,7 +418,25 @@ img {
         </div>
         </form><br>
 
-  
+          <ul class="list-inline mb-0">
+                  <h2 class="mb-4"style ="color: #343A40">O síguenos en:</h2>
+          <li class="list-inline-item mr-3">
+           
+            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>
+
+
+             
+            </li>
+        <li class="list-inline-item mr-3">
+          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+
+        </li>
+
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div><br>

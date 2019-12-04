@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'green',
     'taggit',
     'storages',
+    'upload',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

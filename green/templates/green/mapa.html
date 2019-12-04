@@ -9,18 +9,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Fenix Gran Canaria</title>
-
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -120,9 +118,20 @@ header.masthead .intro-text {
     width: 30%;
   }
 }
+    #features {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    #map canvas {
+        cursor: crosshair;
+    }
 
-
-
+}
 
 .intro-lead-in {
   font-size: 15px;
@@ -149,9 +158,7 @@ header.masthead .intro-text {
   /* Safari and Chrome */
 
 }
-html {
-  scroll-behavior: smooth;
-}
+
 img {
     image-orientation: from-image;
 }
@@ -169,45 +176,6 @@ img {
 }   
 
 
-.container2 {
-  position: relative;
-}
-
-.image2 {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container2:hover .image2 {
-  opacity: 0.5;
-
-}
-
-.container2:hover .middle {
-  opacity: 2;
-}
-
-.texto {
-  background-color: #FED236;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
 </style>
 </head>
 
@@ -230,7 +198,7 @@ img {
             <a class="nav-link js-scroll-trigger" href="#portfolio">Galería</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
+            <a class="nav-link js-scroll-trigger" href="#mapa">Mapa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
@@ -257,7 +225,7 @@ img {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Sobre el proyecto</h3>
+          <h2 class="section-heading text-uppercase">Sobre el proyecto</h2>
          <p> <h3 class="section-subheading text-muted">
        Es una iniciativa que tiene como fin documentar cómo se recupera el bosque de un incendio a partir de fotografías tomadas por voluntarios.</h3></p>
      
@@ -277,7 +245,7 @@ img {
             <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/foto.png" alt="" style="width: 120px"><br><br>
 
           </span><br><br>
-          <p class="text-muted">Coloca tu teléfono en los 'totems', saca una foto y compartela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook. También puedes subirla directamente <a href="{% url 'upload:create' %}"><strong> desde esta web.</strong></a> </p>
+          <p class="text-muted">Coloca tu teléfono en los 'totems' de madera, saca una foto y súbela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -286,17 +254,17 @@ img {
           </span><br><br>
           <p class="text-muted"> Recopilamos las fotos y creamos una galería y su <strong>cambio a lo largo del tiempo.</strong></p>
         </div>
-
-  </section>
-       
-         
         
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Galería</h3>
+          <h2 class="section-heading text-uppercase">Galería</h2>
           <h3 class="section-subheading text-muted"> ¡Únete con una <strong>imágen de cambio! </strong> </h3></p>
         </div>
       </div>
@@ -306,7 +274,7 @@ img {
             <div class="portfolio-hover">
             </div>
   
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/LA_CILLA-min_2.webp" alt="" > 
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/LA_CILLA.jpg" alt="" > 
             </a> 
           <div class="portfolio-caption">
             <h4>Mirador de La Cilla</h4>
@@ -319,7 +287,7 @@ img {
               <div class="portfolio-hover-content">
               </div>
             </div>  
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1-min.webp" alt="" > 
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1.jpg" alt="" > 
           </a>                 
           <div class="portfolio-caption">
             <h4>Mirador del Fin del Mundo</h4>
@@ -354,51 +322,277 @@ img {
 </center>
   </section>
    
-
-       <section class=" page-section" id="mapa">
+       <section class="bg-light page-section" id="mapa">
+    
     <div class="container" id="mapa">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Localización</h3>
+          <h2 class="section-heading text-uppercase">Localización</h2>
           <h3 class="section-subheading text-muted"> ¡Ya tenemos <strong>15 'totems' </strong>! </h3></p>
         </div>
       </div>
     </div>
-<div class="container2" style="background-color: #78BCEC">
-  <a href="{% url 'green:indexmap' %}#mapa">
-  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/media/Group.png" alt="" style="max-width: 50%"></center>
-  <div class="middle">
-    <div class="texto">Ver mapa</div></a>
-</div>
-</section>
+<center><div id='map' style='width: 100%; height: 450px;'></div></center></section>
 
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGFycXVlZm9yZXN0YWxjYiIsImEiOiJjazJhZDNnZjQyczRvM25ucmhpc3cyeG1uIn0.MnMoc6IjX7juyxHVEkwqtA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/parqueforestalcb/ck2ad728q3d8y1cm1i9tfpzc8?optimize=true',
 
+    center: [-15.648069, 28.030149],
+    zoom: 10,
+});
+
+ 
+map.on('load', function () {
+// Add a layer showing the places.
+map.addLayer({
+"id": "places",
+"type": "symbol",
+"source": {
+"type": "geojson",
+"data": {
+"type": "FeatureCollection",
+"features": [{
+"type": "Feature",
+"image": '',
+"properties": {             
+
+"description": "<strong>Mirador de  La Cilla</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+ 'marker-size': 'large',
+"coordinates": [-15.6487978, 28.0206194]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "Mirador <strong>Degollada del Humo</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6809085, 28.0556254]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Mesa de Acusa</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6747167, 28.0130406]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Mirador de Tejeda</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6142591, 27.9989345]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Lugarejos</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6773581, 28.0395998]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Las Hoyas</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6584952, 28.0321911]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Área recreativa Tamadaba</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6885408, 28.0585012]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Degollada del Sargento</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6785625, 28.0290341]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"description": "<strong>Degollada del Sargento</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6785625, 28.0290341]
+}
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Degollada del Sargento</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6785625, 28.0290341]
+}
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Cruz de Maria</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6896348, 28.0359589]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Cuevas del Caballero </strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -15.6196550, 28.0169390]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Fuentefría</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6102032, 28.0247602]
+}
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Cueva Corcho </strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.5885206, 28.0241610]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Doña Paca</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6191691, 28.0498679 ]
+}
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Galaz</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.5817765, 28.0172686]
+}
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Pajaritos </strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-15.6077651, 28.0362461]
+}
+},
+ {
+"type": "Feature",
+"properties": {
+"description": "<strong>Fin del Mundo</strong>",
+"icon": "art-gallery"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -15.6966018,28.060903]
+}
+}]
+}
+},
+"layout": {
+"icon-image": "{icon}-15",
+"icon-allow-overlap": true
+}
+});
+ 
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+</script>
 
   <!-- Contact -->
-
-  <!-- Call to Action -->
+ <br><br>
+  <!-- Call to Action --><br>
   <section class="call-to-action text-dark text-center" id="contacto">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-8 mx-auto">
-                  <ul class="list-inline mb-0">
-            <h3 class="mb-4"style ="color: #343A40">Síguenos en:</h3>
-          <li class="list-inline-item mr-3">   
-            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
-            </li>
-          <li class="list-inline-item mr-3">
-          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
-            </li>
-
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
-              </a>
-            </li>
-          </ul><br>
+          <h2 class="mb-4">Suscríbete para participar</h2>
         </div>
         <div class="col-xl-8 mx-auto">
-         <h4 class="mb-4">o suscríbete para estar al día</h4>
          <form action="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
           <div class="form-row">
         <div class="col-xl-8 mx-auto">
@@ -415,7 +609,25 @@ img {
         </div>
         </form><br>
 
-  
+          <ul class="list-inline mb-0">
+                  <h2 class="mb-4"style ="color: #343A40">O síguenos en:</h2>
+          <li class="list-inline-item mr-3">
+           
+            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>
+
+
+             
+            </li>
+        <li class="list-inline-item mr-3">
+          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+
+        </li>
+
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div><br>
