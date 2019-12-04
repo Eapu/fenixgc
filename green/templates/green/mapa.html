@@ -158,7 +158,9 @@ header.masthead .intro-text {
   /* Safari and Chrome */
 
 }
-
+html {
+  scroll-behavior: smooth;
+}
 img {
     image-orientation: from-image;
 }
@@ -186,7 +188,7 @@ img {
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        
+        Menu
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -274,7 +276,7 @@ img {
             <div class="portfolio-hover">
             </div>
   
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/LA_CILLA.jpg" alt="" > 
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/LA_CILLA-min_2.webp" alt="" > 
             </a> 
           <div class="portfolio-caption">
             <h4>Mirador de La Cilla</h4>
@@ -287,8 +289,8 @@ img {
               <div class="portfolio-hover-content">
               </div>
             </div>  
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1.jpg" alt="" > 
-          </a>                 
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1-min.webp" alt="" > 
+          </a>                  
           <div class="portfolio-caption">
             <h4>Mirador del Fin del Mundo</h4>
             <p class="text-muted">Agaete</p>
@@ -322,8 +324,12 @@ img {
 </center>
   </section>
    
-       <section class="bg-light page-section" id="mapa">
-    
+
+
+ 
+       <section class="page-section" id="mapa">
+        
+        <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/map.webp" alt="" > 
     <div class="container" id="mapa">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -582,17 +588,28 @@ map.getCanvas().style.cursor = '';
 });
 </script>
 
-  <!-- Contact -->
- <br><br>
-  <!-- Call to Action --><br>
-  <section class="call-to-action text-dark text-center" id="contacto">
+ <section class="call-to-action text-dark text-center" id="contacto">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-8 mx-auto">
-          <h2 class="mb-4">Suscríbete para participar</h2>
+                  <ul class="list-inline mb-0">
+            <h4 class="mb-4"style ="color: #343A40">Síguenos en:</h4>
+          <li class="list-inline-item mr-3">   
+            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
+            </li>
+          <li class="list-inline-item mr-3">
+          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
+              </a>
+            </li>
+          </ul><br>
         </div>
         <div class="col-xl-8 mx-auto">
+         <h5 class="mb-4">o suscríbete para estar al día</h5>
          <form action="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
           <div class="form-row">
         <div class="col-xl-8 mx-auto">
@@ -609,25 +626,7 @@ map.getCanvas().style.cursor = '';
         </div>
         </form><br>
 
-          <ul class="list-inline mb-0">
-                  <h2 class="mb-4"style ="color: #343A40">O síguenos en:</h2>
-          <li class="list-inline-item mr-3">
-           
-            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>
-
-
-             
-            </li>
-        <li class="list-inline-item mr-3">
-          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
-
-        </li>
-
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
-              </a>
-            </li>
-          </ul>
+  
         </div>
       </div>
     </div><br>
