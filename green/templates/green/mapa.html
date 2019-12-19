@@ -692,16 +692,16 @@ map.getCanvas().style.cursor = '';
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-              {% for Tejeda in posts4 %}
+              {% for Degollada_de_Sargento in posts8 %}
                 <!-- Project Details Go Here -->
-                <h3 class="">{{ Tejeda.title }}</h3>
-                <p class="text-muted">{{ Tejeda.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ Tejeda.image.url }}" alt="" style="width: 100%"> 
-                <p align="justify">{{ Tejeda.body }}</p>
-                {% if Tejeda.link %}
-                    <a target="_blank" rel="noopener noreferrer" href="{{ Tejeda.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
+                <h3 class="">{{ Degollada_de_Sargento.title }}</h3>
+                <p class="text-muted">{{ Degollada_de_Sargento.place }}</p>   
+                <img class="img-fluid d-block mx-auto" src="{{ Degollada_de_Sargento.image.url }}" alt="" style="width: 100%"> 
+                <p align="justify">{{ Degollada_de_Sargento.body }}</p>
+                {% if Degollada_de_Sargento.link %}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_de_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
                     {% endif %}
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Tejeda.author }}</strong>,&nbsp;&nbsp;{{ Tejeda.created|date:"M d, Y"  }}</p>
+                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Degollada_de_Sargento.author }}</strong>,&nbsp;&nbsp;{{ Degollada_de_Sargento.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
              <button class="btn btn-primary" data-dismiss="modal" type="button">
