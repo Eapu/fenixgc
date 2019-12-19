@@ -8,12 +8,14 @@ def index(request, tag_slug=None):
              posts = La_Cilla.published.all()
              posts9 = Fin_del_Mundo.published.all()
              posts4 = Tejeda.published.all()
-             return render(request,'green/index.html',  {'posts': posts,'posts9': posts9,'posts4': posts4})
+             posts8 = Degollada_del_Sargento.published.all() 
+
+             return render(request,'green/index.html',  {'posts': posts,'posts9': posts9,'posts4': posts4,'posts8': posts8})
 def indexmap(request, tag_slug=None):
              posts = La_Cilla.published.all()
              posts9 = Fin_del_Mundo.published.all()
-             posts4 = Tejeda.published.all()
-             return render(request,'green/mapa.html',  {'posts': posts,'posts9': posts9,'posts4': posts4})
+             posts8 = Degollada_del_Sargento.published.all()
+             return render(request,'green/mapa.html',  {'posts': posts,'posts9': posts9,'posts4': posts4,'posts8': posts8})
 
 def fenixgram(request, tag_slug=None):
              posts = La_Cilla.published.all()
