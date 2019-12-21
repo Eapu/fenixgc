@@ -46,106 +46,7 @@
 
 
 }
-.fa-instagram:hover{
-   color:#FED137 !important;
-}
-.fa-instagram:hover{
-   color:#FED137 !important;
-}
-.fa-twitter:hover{
-   color:#FED137 !important;
-}
-.fa-twitter:hover{
-   color:#FED137 !important;
-}
-.fa-facebook:hover{
-   color:#FED137 !important;
-}
-.fa-facebook:hover{
-   color:#FED137 !important;
-}
-#mainNav .navbar-brand {
-  color: #fed136;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 20px;
 
-}
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all ease 0.5s;
-  opacity: 0;
-  background: rgba(59,54,254, 0.4);
-}
-header.masthead .intro-text {
-  padding-top: 130px;
-  padding-bottom: 100px;
-}
-.page-section h3.section-subheading {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.projects-section {
-  padding: 10rem 0;
-}
-
-.projects-section .featured-text {
-  padding: 2rem;
-}
-
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
-}
-
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
-  .projects-section .project-text hr {
-    border-color: #64a19d;
-    border-width: .25rem;
-    width: 30%;
-  }
-}
-
-
-
-
-.intro-lead-in {
-  font-size: 15px;
-  font-style: italic;
-  line-height: 22px;
-  margin-bottom: 25px;
-  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-.portfolio-modal .modal-content {
-  padding: 50px 0;
-  text-align: center;
-
-}
-
-
-.portfolio-modal .modal-content h3 {
-  margin-bottom: 10px;
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 10px;
-}
-.lr {
-  /* Safari and Chrome */
-
-}
 html {
   scroll-behavior: smooth;
 }
@@ -153,8 +54,7 @@ img {
     image-orientation: from-image;
 }
 .footer {
-
-   
+  
     width: 100%; 
     background-repeat: repeat;
     background-attachment: scroll;
@@ -205,11 +105,33 @@ img {
   font-size: 16px;
   padding: 16px 32px;
 }
+.carousel-inner > .item > img {
+  position: absolute;
+  -webkit-transform: translate(-20%, -20%);
+  -ms-transform: translate(-20%, -20%);
+  transform: translate(-20%, -20%);
+  max-height: 20px;
+  width: 20%;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 35px;
+  color: #F3C31A;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 35px;
+  color: #F3C31A;
+}
+
+
 @media (max-width: 40em) {
 .screen_image {
 display: none;
 }
-
+}
 
 @media (min-width: 992px) {
 .image2 {
@@ -217,6 +139,24 @@ width: 40%;
 
 }
 }
+section#contact {
+  background-color: #212529;
+  background-image: url("../img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
++
+.section-subheading {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+.page-section {
+  padding: 80px 0;
+}
+
+
+
 </style>
 </head>
 
@@ -359,25 +299,23 @@ width: 40%;
   
 </center>
   </section>
-   
+ 
        <section class=" page-section" id="mapa">
     <div class="container" id="mapa">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h3 class="section-heading text-uppercase">Localización</h3>
-          <h3 class="section-subheading text-muted"> ¡Ya tenemos <strong>16 'totems' </strong>! </h3></p>
+          <h3 class="section-subheading text-muted"> ¡Ya tenemos <strong>15 'totems' </strong>! </h3></p>
         </div>
       </div>
     </div>
 <div class="container2" style="background-color: #65ACE5">
   <a href="{% url 'green:indexmap' %}#mapa">
-  <center><img class="image2 "src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/mapgc.webp" alt="" ></center>
+  <center><img class="image2 "src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/mapgc.webp" alt=""></center>
   <div class="middle">
     <div class="texto">Ver mapa</div></a>
 </div>
 </section>
-
-
 
   <!-- Contact -->
 
