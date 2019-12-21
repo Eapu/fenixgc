@@ -363,7 +363,7 @@ display: none;
     </div>
 <div class="container2" style="background-color: #78BCEC">
   <a href="{% url 'green:indexmap' %}#mapa">
-  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/map_crop-min.webp" alt="" style="max-width: 120%"></center>
+  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/map_crop-min.webp" alt="" style="max-width: 130%"></center>
   <div class="middle">
     <div class="texto">Ver mapa</div></a>
 </div>
@@ -520,7 +520,7 @@ display: none;
                 {% if Degollada_de_Sargento.link %}
                     <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_de_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
                     {% endif %}
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Degollada_de_Sargento.author }}</strong>,&nbsp;&nbsp;{{ Degollada_de_Sargento.created|date:"M d, Y"  }}</p>
+                <p class="text-muted" style="font-size:160%;>&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Degollada_de_Sargento.author }}</strong>,&nbsp;&nbsp;{{ Degollada_de_Sargento.created|date:"M d, Y"  }}</p>
                  <hr><br>
               {% endfor %}
              <button class="btn btn-primary" data-dismiss="modal" type="button">
