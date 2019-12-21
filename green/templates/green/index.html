@@ -209,6 +209,12 @@ img {
 .screen_image {
 display: none;
 }
+@media (max-width: 40em) {
+.image2 {
+width: 200%;
+
+}
+}
 </style>
 </head>
 
@@ -363,7 +369,7 @@ display: none;
     </div>
 <div class="container2" style="background-color: #78BCEC">
   <a href="{% url 'green:indexmap' %}#mapa">
-  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/map_crop-min.webp" alt="" style="width: 150%"></center>
+  <center><img class="image2 img-fluid"src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/map_crop-min.webp" alt="" style="max-width: 240%"></center>
   <div class="middle">
     <div class="texto">Ver mapa</div></a>
 </div>
