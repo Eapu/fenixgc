@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.safestring import mark_safe
 
 TOTEM_CHOICES= [
 	('La_Cilla', 'Mirador de La Cilla'),
