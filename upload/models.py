@@ -27,7 +27,7 @@ class Usuarios(models.Model):
 	upload = models.FileField()
 	totem = models.CharField(max_length=50, choices=TOTEM_CHOICES, default='Mirador de La Cilla')
 	def image_tag(self):
-		return mark_safe('<img src="%s" width="150px"  />' % (self.upload.url))  # Get Image url
+		return mark_safe('<img src="%s" width="140px"  />' % (self.upload.url))  # Get Image url
 
 	image_tag.short_description = 'Image'
 
