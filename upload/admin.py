@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Usuarios
+from django.utils.html import format_html
+from imagekit.admin import AdminThumbnail
 
 class UsuariosAdmin(admin.ModelAdmin):
     list_display = ('user','totem','image_tag','uploaded_at')
