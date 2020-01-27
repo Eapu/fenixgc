@@ -163,7 +163,12 @@ width: 40%;
   overflow: scroll;
   border: 0px solid green;
 }
-
+@media screen and (max-width: 480px) {
+.media_insta {
+    width: 100%;
+     height: 330px;
+    }
+}
 
 .text {
 overflow: hidden;
@@ -286,7 +291,7 @@ display: -webkit-box;
               <div class="portfolio-hover-content">
               </div>
             </div>
-            <div class="box_insta">
+            <div class="box_insta media_insta">
              {% instagram_user_recent_media fenixgrancanaria %}
              {% for media in recent_media %}
               <img class="img-fluid" src="{{ media.thumbnail_src }}"/><br><br>
