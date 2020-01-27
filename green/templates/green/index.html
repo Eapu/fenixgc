@@ -1,4 +1,5 @@
 {% load static from staticfiles %}
+{% load instagram_client %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -152,7 +153,23 @@ width: 40%;
   opacity: 0;
   background: rgba(59,54,254, 0.4);
 }
+.box_insta {
+  background-color: transparent;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  overflow: scroll;
+  border: 0px solid green;
+}
 
+
+.text {
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
 
 </style>
 </head>
@@ -248,50 +265,40 @@ width: 40%;
         </div>
       </div>
        <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <div class="screen_image">
-           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
-            </div>
-              <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/LA_CILLA-min_2.webp" alt="" > </a>
-             <div class="portfolio-caption">
-             <h4 >Mirador de La Cilla</h4>
-             <p class="text-muted">Artenara</p>
-             </div> 
-            </div>
-           </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <div class="screen_image">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
-            </div>  
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/FIN_DEL_MUNDO_FOTO1-min.webp" alt="" > 
-          </a>                 
-          <div class="portfolio-caption">
-            <h4>Mirador del Fin del Mundo</h4>
-            <p class="text-muted">Agaete</p>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+               <div class="col portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
               </div>
             </div>       
-            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/media/IMG-20191110-WA0009-min.webp" alt=""  > 
+            <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  > 
           </a>               
           <div class="portfolio-caption">
-            <h4>Degollada de Sargento</h4>
-            <p class="text-muted">Artenara</p>
+            <h4>Nuestros totems</h4>
+            <p class="text-muted">Degollada del Sargento</p>
           </div>
         </div>
-        <br>
-        
+        <div class="col portfolio-item">
+           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+              </div>
+            </div>
+            <div class="box_insta">
+             {% instagram_user_recent_media fenixgrancanaria %}
+             {% for media in recent_media %}
+              <img class="img-fluid" src="{{ media.thumbnail_src }}"/><br><br>
+             {% endfor %}
+             </div>
+             </a>
+             <div class="portfolio-caption">
+             <h4 >De nuestras redes</h4>
+             <p class="text-muted">Instagram</p>
+             </div> 
+           </div>
+
+
+        <br>     
       </div>
       <center>
           <a href="{% url 'green:fenixgram'  %}">
@@ -329,14 +336,14 @@ width: 40%;
                   <ul class="list-inline mb-0">
             <h3 class="mb-4"style ="color: #343A40">Síguenos en:</h3>
           <li class="list-inline-item mr-3">   
-            <a href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
+            <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
             </li>
           <li class="list-inline-item mr-3">
-          <a href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
             </li>
 
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
               </a>
             </li>
           </ul><br>
@@ -388,18 +395,12 @@ width: 40%;
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-              {% for La_Cilla in posts %}
-                <!-- Project Details Go Here -->
-                <h3 class="">{{ La_Cilla.title }}</h3>
-                <p class="text-muted">{{ La_Cilla.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ La_Cilla.image.url }}" alt="" style="width: 100%"> 
-                <p align="justify">{{ La_Cilla.body }}</p>
-                {% if La_Cilla.link %}
-                    <a target="_blank" rel="noopener noreferrer" href="{{ La_Cilla.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
-                    {% endif %}
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ La_Cilla.author }}</strong>,&nbsp;&nbsp;{{ La_Cilla.created|date:"M d, Y"  }}</p>
-                 <hr><br>
-              {% endfor %}
+            {% instagram_user_recent_media fenixgrancanaria %}
+             {% for media in recent_media %}
+              <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br><br>
+              <span class="text">{{ media.edge_media_to_caption.edges.0.node.text }}</span>     
+             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/fenixgrancanaria/"><strong> ...ver en instagram!</strong></a><br><br>
+             {% endfor %}
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                 <i class="fa fa-times"></i>
                   Cerrar</button>
@@ -410,43 +411,8 @@ width: 40%;
       </div>
     </div>
   </div>
-
   <!-- Modal 2 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-           <button type="button" class="close" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>  
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-              {% for Fin_del_Mundo in posts9 %}
-                <!-- Project Details Go Here -->
-                <h3 class="">{{ Fin_del_Mundo.title }}</h3>
-                <p class="text-muted">{{ Fin_del_Mundo.place }}</p>   
-                <img class="img-fluid d-block mx-auto" src="{{ Fin_del_Mundo.image.url }}" alt="" style="width: 100%"> 
-                <p align="justify">{{ Fin_del_Mundo.body }}</p>
-                {% if Fin_del_Mundo.link %}
-                    <a target="_blank" rel="noopener noreferrer" href="{{ Fin_del_Mundo.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
-                    {% endif %}
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>{{ Fin_del_Mundo.author }}</strong>,&nbsp;&nbsp;{{ Fin_del_Mundo.created|date:"M d, Y"  }}</p>
-                 <hr><br>
-              {% endfor %}
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                <i class="fa fa-times"></i>
-                  Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- Modal 3 -->
  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
