@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'storages',
     'upload',
     'crispy_forms',
-]
+    'django_instagram',
+
+    ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
