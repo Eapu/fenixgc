@@ -233,6 +233,9 @@ display: -webkit-box;
 
           </span><br><br>
           <p class="text-muted"> Hemos instalado 'totems' de madera <a href="{% url 'green:indexmap' %}#mapa"><strong> ubicados</strong></a> a lo largo de senderos y miradores que atraviesan zonas quemadas.</p>
+          <div class="col-xl-8 mx-auto">
+               <div class="clear"> <button type="submit" class="btn btn-block btn-lg btn-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
+            </div> 
           
         </div>
         <div class="col-md-4">
@@ -286,7 +289,8 @@ display: -webkit-box;
             <div class="box_insta media_insta">
              {% instagram_user_recent_media fenixgrancanaria %}
              {% for media in recent_media %}
-             <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ media.thumbnail_src }}">  
+              <img class="img-fluid" src="{{ media.thumbnail_src }}"/><br><br>
+ 
               <br><br>
              {% endfor %}
              </div>
@@ -361,7 +365,7 @@ display: -webkit-box;
               </div><br>
 
            <div class="col-xl-8 mx-auto">
-               <div class="clear"> <button type="submit" class="btn btn-block btn-lg btn-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Enviar!</button></div>
+               <div class="clear"> <button type="submit" class="btn btn-block btn-lg btn-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
             </div> 
 
           </div>  
