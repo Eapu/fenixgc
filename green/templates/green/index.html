@@ -286,7 +286,8 @@ display: -webkit-box;
             <div class="box_insta media_insta">
              {% instagram_user_recent_media fenixgrancanaria %}
              {% for media in recent_media %}
-              <img class="img-fluid" src="{{ media.thumbnail_src }}"/><br><br>
+             <img class="img-fluid" class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ media.thumbnail_src }}">  
+              <br><br>
              {% endfor %}
              </div>
              </a>
