@@ -427,8 +427,10 @@ display: -webkit-box;
               <div class="modal-body">
                 <!-- Project Details Go Here -->
               <h4 class="">Nuestros Totems</h4>
-                <p class="text-muted">Degollada_de_Sargento</p>   
-                <img class="img-fluid d-block mx-auto" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt="" style="width: 100%"> 
+                <p class="text-muted">Degollada_de_Sargento</p> 
+
+                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp">  
+                
                 <p align="justify">Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación que se puede encontrar y su previsible recuperación.</p>
                 {% if Degollada_de_Sargento.link %}
                     <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_de_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
@@ -472,7 +474,16 @@ display: -webkit-box;
   <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-
+<!-- Defer images -->
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
 <script>
@@ -482,6 +493,7 @@ display: -webkit-box;
 
   gtag('config', 'UA-155307635-1');
 </script>
+
 </html>
 
 
