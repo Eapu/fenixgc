@@ -223,6 +223,10 @@ display: -webkit-box;
           <h3 class="section-heading text-uppercase">Sobre el proyecto</h3>
          <p> <h3 class="section-subheading text-muted">
        Es una iniciativa que invita a contribuir activamente en la recuperación del entorno forestal con fotografías y medidas de sensibilización.</h3></p>
+                 <div class="col-xl-8 mx-auto">
+               <div class="clear"> <button type="submit" class="btn btn-block btn-lg btn-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
+            </div> 
+          
      
         </div>
       </div>
@@ -233,10 +237,7 @@ display: -webkit-box;
 
           </span><br><br>
           <p class="text-muted"> Hemos instalado 'totems' de madera <a href="{% url 'green:indexmap' %}#mapa"><strong> ubicados</strong></a> a lo largo de senderos y miradores que atraviesan zonas quemadas.</p>
-          <div class="col-xl-8 mx-auto">
-               <div class="clear"> <button type="submit" class="btn btn-block btn-lg btn-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
-            </div> 
-          
+
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -434,7 +435,7 @@ display: -webkit-box;
               <h4 class="">Nuestros Totems</h4>
                 <p class="text-muted">Degollada_de_Sargento</p> 
 
-                <img class="img-fluid d-block mx-auto" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp">  
+                <img src="{{ media.thumbnail_src }}" />  
                 
                 <p align="justify">Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación que se puede encontrar y su previsible recuperación.</p>
                 {% if Degollada_de_Sargento.link %}
