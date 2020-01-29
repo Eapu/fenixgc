@@ -289,7 +289,7 @@ display: -webkit-box;
             <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  > 
           </a>               
           <div class="portfolio-caption">
-            <h4>Nuestros totems</h4>
+            <h3>Nuestros totems</h3>
             <p class="text-muted">Colabora con tu foto</p>
           </div>
         </div>
@@ -302,12 +302,10 @@ display: -webkit-box;
               <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/insta-min.webp"/>
              </a>
              <div class="portfolio-caption">
-             <h4 >De nuestras redes</h4>
+             <h3>De nuestras redes</h3>
              <p class="text-muted">Instagram</p>
              </div> 
            </div>
-
-
         <br>     
       </div>
       <center>
@@ -328,7 +326,7 @@ display: -webkit-box;
       </div>
     </div>
 <div class="container2" style="background-color: #65ACE5">
-  <a href="{% url 'green:indexmap' %}">
+  <a href="{% url 'green:indexmap' %}#mapa">
   <center><img class="image2 "src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/mapgc.webp" alt=""></center>
   <div class="middle">
     <div class="texto">VER MAPA</div></a>
@@ -404,7 +402,7 @@ display: -webkit-box;
           <div class="row">
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
-               <h4 class="">De nuestras redes</h4>
+               <h3>De nuestras redes</h3>
 
                 <!-- Project Details Go Here -->
             {% instagram_user_recent_media fenixgrancanaria %}
@@ -439,13 +437,11 @@ display: -webkit-box;
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-              <h4 class="">Nuestros Totems</h4>
+              <h3 class="">Nuestros Totems</h3>
 
                 <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  >                     
-                <p>Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación que se puede encontrar y su previsible recuperación.</p>
-                {% if Degollada_de_Sargento.link %}
-                    <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_de_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
-                    {% endif %}
+                <p>Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación y su previsible recuperación.</p>
+                   
                 <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>@fenixgrancanaria</strong>,&nbsp;&nbsp;Nov 02, 2019</p>
                  <hr><br>
              <button class="btn btn-primary" data-dismiss="modal" type="button">
