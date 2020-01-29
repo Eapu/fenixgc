@@ -411,7 +411,7 @@ display: -webkit-box;
                 <!-- Project Details Go Here -->
             {% instagram_user_recent_media fenixgrancanaria %}
              {% for media in recent_media %}
-              <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br><br>
+              <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br>
               <span class="text">{{ media.edge_media_to_caption.edges.0.node.text }}</span>     
              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/fenixgrancanaria/"><strong> ...ver en instagram!</strong></a><br><br>
              {% endfor %}
