@@ -86,7 +86,11 @@
   font-size: 20px;
 
 }
+#mainNav {
+  background-color: #212529;
+    padding: 10px;
 
+}
 </style>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -117,7 +121,7 @@
       </div>
     </div>
   </nav>
-<br><br><br><br>
+<br><br><br><br><br><br>
   <div class="container">
   <form action="{% url 'upload:create' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
