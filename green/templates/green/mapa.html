@@ -282,7 +282,7 @@ display: -webkit-box;
           </a>               
           <div class="portfolio-caption">
             <h4>Nuestros totems</h4>
-            <p class="text-muted">Degollada del Sargento</p>
+            <hr></hr>
           </div>
         </div>
         <div class="col portfolio-item">
@@ -611,10 +611,12 @@ map.getCanvas().style.cursor = '';
           <div class="row">
             <div class="col-lg-6 mx-auto">
               <div class="modal-body">
+                <h4 class="">De nuestras redes</h4>
+
                 <!-- Project Details Go Here -->
             {% instagram_user_recent_media fenixgrancanaria %}
              {% for media in recent_media %}
-              <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br><br>
+              <img src="{{ media.thumbnail_src }}" style="width: 90%"/>
               <span class="text">{{ media.edge_media_to_caption.edges.0.node.text }}</span>     
              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/fenixgrancanaria/"><strong> ...ver en instagram!</strong></a><br><br>
              {% endfor %}
@@ -645,9 +647,8 @@ map.getCanvas().style.cursor = '';
               <div class="modal-body">
                 <!-- Project Details Go Here -->
               <h4 class="">Nuestros Totems</h4>
-                <p class="text-muted">Degollada_de_Sargento</p> 
 
-                <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  >                
+                <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  >                     
                 <p align="justify">Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación que se puede encontrar y su previsible recuperación.</p>
                 {% if Degollada_de_Sargento.link %}
                     <a target="_blank" rel="noopener noreferrer" href="{{ Degollada_de_Sargento.link }}"><i class="fa fa-external-link-square" style="color:#212528"> </i> </a>Ver en mapa</p>
@@ -666,7 +667,6 @@ map.getCanvas().style.cursor = '';
     </div>
   </div>
 </div>
-
 </body>
 
  <!-- Footer -->
