@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'upload',
     'crispy_forms',
     'django_instagram',
+    'blog',
 
     ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
