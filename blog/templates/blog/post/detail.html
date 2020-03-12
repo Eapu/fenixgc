@@ -5,7 +5,7 @@
 
 {% block content %}
 <ul class="nav">
-  <li class="nav"><a class="active" href="javascript:history.back()" style="color: #EEC534">FENIX</a></li>
+  <li class="nav"><a class="active" href="/blog" style="color: #EEC534">FENIX</a></li>
 </ul>
 <a name="top"></a>
 
@@ -84,7 +84,7 @@ and is wrapped around the whole page content, except for the footer in this exam
    {% for about_me in abouts %}
   <img src="{{ about_me.avatar.url }}" style="width:100%">
     <div class="w3-container w3-white">
-      <h1><b>{{ about_me.name }}</b></h1>
+      <h2><b>{{ about_me.name }}</b></h2>
       <p>{{ about_me.body }}</p>
       {% endfor %}
     </div>
