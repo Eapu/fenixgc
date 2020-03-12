@@ -74,12 +74,10 @@ img {
     background-repeat: repeat;
     background-attachment: scroll;
     background-position: 0% 0%;
-
     bottom: 0pt;
     left: 0pt;
 
 }   
-
 
 .container2 {
   position: relative;
@@ -198,14 +196,12 @@ display: -webkit-box;
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Galería</a>
-          </li>
+ 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'upload:create' %}">Subir foto</a>
+            <a class="nav-link js-scroll-trigger" href="#subir">Subir foto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'blog:post_list' %}">Blog</a>
@@ -271,19 +267,13 @@ display: -webkit-box;
 
   </section>
        
-         
-        
+<div class="" id="subir">
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Galería</h3>
-          <h6 class="section-subheading text-muted"> ¡Únete con una <strong>imagen de cambio! </strong> </h6></p>
-        </div>
-      </div>
+  
        <div class="row">
-               <div class="col portfolio-item">
+        <div class="col portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -297,23 +287,28 @@ display: -webkit-box;
           </div>
         </div>
         <div class="col portfolio-item">
-           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+           <a class="portfolio-link" data-toggle="" href="{% url 'blog:post_list' %}">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
               </div>
             </div> 
-              <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/insta-min.webp"/>
+              <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_blog.webp"/>
              </a>
              <div class="portfolio-caption">
-             <h3>De nuestras redes</h3>
-             <p class="text-muted">Instagram</p>
+             <h3>Nuestro Blog</h3>
+             <p class="text-muted">Echa un vistazo nuestro blog!</p>
              </div> 
            </div>
         <br>     
       </div>
       <center>
-          <a href="{% url 'green:fenixgram'  %}">
-        <button href="" type="button" class="btn btn-outline-primary js-scroll-trigger">Ver más</button></a>
+              <div class="row">
+        <div class="col-lg-12 text-center">
+          <h6 class="section-subheading text-muted"> ¡Únete con una <strong>imagen de cambio! </strong> </h6></p>
+        </div>
+      </div>
+          <a href="{% url 'upload:create' %}" >
+        <button href="" type="button" class="btn btn-outline-primary js-scroll-trigger" >Subir Foto</button></a>
 
   
 </center>
