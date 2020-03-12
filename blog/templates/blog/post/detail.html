@@ -42,9 +42,9 @@ and is wrapped around the whole page content, except for the footer in this exam
      {% endfor %}
       <div class="w3-row">
         <div class="w3-col m8 s4">
-          
+          <p><a href="{{ post.get_absolute_url }}"><button class="w3-button  w3-white w3-border"><b></b>&#xf27a;</button></p></a>
         </div>
-        <div class="w3-col m4 s12">
+        <div class="w3-col m4 s8">
           <p><span class="w3-padding-small w3-right"><b>  </b> <span class="w3-tag" style="padding-bottom: 1px; background-color: #212529">{{ post.comments.count }}</span>&nbsp;<i style='font-size:24px' class='far'>&#xf27a;</i></p><br><br>  
       </div>
       </div>
