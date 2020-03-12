@@ -274,12 +274,12 @@ display: -webkit-box;
   
        <div class="row">
         <div class="col portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+          <a class="portfolio-link" data-toggle="" href="{% url 'green:fenixgram' %}">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
               </div>
             </div>       
-            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  > 
+            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""> 
           </a>               
           <div class="portfolio-caption">
             <h3>Nuestros totems</h3>
@@ -383,79 +383,7 @@ display: -webkit-box;
   </section><br><br>
 
            
-           
-
-  <!-- Portfolio Modals -->
-
-  <!-- Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-         <button type="button" class="close" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-         </button>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="modal-body">
-               <h3>De nuestras redes</h3>
-                  <hr></hr>
-                <!-- Project Details Go Here -->
-            {% instagram_user_recent_media fenixgrancanaria %}
-             {% for media in recent_media %}
-              <img src="{{ media.thumbnail_src }}" style="width: 90%"/><br>
-              <span class="text">{{ media.edge_media_to_caption.edges.0.node.text }}</span>     
-             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/fenixgrancanaria/"><strong> ...ver en instagram!</strong></a><br><br>
-             {% endfor %}
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                <i class="fa fa-times"></i>
-                  Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal 2 -->
- 
-  <!-- Modal 3 -->
- <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <button type="button" class="close" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-           </button> 
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-              <h3 class="">Nuestros Totems</h3>
-                  
-
-                <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  >                     
-                <p>Los totems se encuentran a lo largo de senderos y miradores con panorámicas a las zonas quemadas en los entornos de Tamabada y la Cumbre de Gran Canaria. Para cada totem se ha establecido una orientación específica en función del tipo de vegetación y su previsible recuperación.</p>
-                   
-                <p class="text-muted">&nbsp;Foto enviada por:&nbsp;&nbsp;<strong>@fenixgrancanaria</strong>,&nbsp;&nbsp;Nov 02, 2019</p>
-                 <hr><br>
-             <button class="btn btn-primary" data-dismiss="modal" type="button">
-                <i class="fa fa-times"></i>
-                  Cerrar</button>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+          
 </body>
 
  <!-- Footer -->
