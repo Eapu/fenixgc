@@ -24,6 +24,7 @@ class UsuariosForm(forms.ModelForm):
 	user = forms.CharField(max_length=10,label='Nombre', help_text='')
 	totem= forms.CharField(widget=forms.Select(choices=TOTEM_CHOICES), help_text='Seleciona el totem en el que te encuentres.')
 	upload = forms.FileField(widget=forms.FileInput(),label='Imagen', help_text='Sube la foto!')
+	email = forms.CharField(required=False,max_length=10,label='Email', help_text='Envianos tu mail si quieres participar en nuestro sorteo!')
 
 	class Meta:
 		model = Usuarios
@@ -32,6 +33,8 @@ class UsuariosForm(forms.ModelForm):
 			'user': ('Nombre'),
 			'totem': ('totem'),
 			'upload': ('imagen'),
+			'email': ('email'),
+
 		 }
 		
 
