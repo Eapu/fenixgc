@@ -92,10 +92,11 @@
 
 }
 </style>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="{% url 'green:index' %}">FENIX </a>
-     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #212529;">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
+     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
         
         <i class="fa fa-bars" style="color: #FED236;font-size:20px"></i>
 
@@ -105,9 +106,7 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Galería</a>
-          </li>
+ 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
           </li>
@@ -115,7 +114,10 @@
             <a class="nav-link js-scroll-trigger" href="{% url 'upload:create' %}">Subir foto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+            <a class="nav-link js-scroll-trigger" href="{% url 'blog:post_list' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Suscríbete</a>
           </li>
         </ul>
       </div>
