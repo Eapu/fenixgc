@@ -45,7 +45,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p><a href="{{ post.get_absolute_url }}"><button class="w3-button  w3-white w3-border"><b>LEER MÁS »</b></button></p></a>
         </div>
         <div class="w3-col m4 s8">
-          <p><span class="w3-padding-small w3-right"><b>  </b> <span class="w3-tag" style="padding-bottom: 1px; background-color: #212529">{{ post.comments.count }}</span>&nbsp;<i style='font-size:24px' class='far'>&#xf27a;</i></p><br>  <br>  
+          <p><span class="w3-padding-small w3-right"><b>  </b> <span class="w3-tag" style="padding-bottom: 1px; background-color: #212529">{{ post.comments.count }}</span>&nbsp;<i style='font-size:24px' class='far'>&#xf27a;</i></p><br><br>  
       </div>
       </div>
     </div>
@@ -79,7 +79,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <img class="img-fluid" src="{{ post.image.url }}" alt="image" class="w3-left w3-margin-right" style="width:60px">
     {% endif %}      
      <span class="w3-large">{{ post.title|truncatewords:3 }}</span>
-        <span style="float: right">{{ post.publish|date:"M d, Y" }}</span><br>
+        <span style="float: right">{{ post.publish|date:"M d, Y" }}</span><br><br>
       </li>
        {% endfor %}
     </ul></a>
@@ -108,7 +108,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Footer -->
 <footer class="w3-container w3-light w3-padding-32 w3-margin-top">
   {% include "pagination.html" with page=posts %}
-  
+  <a href="#top">Volver al inicio</a>
+
 </footer>
      
 
