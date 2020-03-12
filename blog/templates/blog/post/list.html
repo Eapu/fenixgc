@@ -106,9 +106,11 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
    
 <!-- Footer -->
-<footer class="w3-container w3-light w3-padding-32 w3-margin-top">
-  {% include "pagination.html" with page=posts %}
-  <a href="#top">Volver al inicio</a>
+<footer class="w3-container  w3-padding-32 w3-margin-top" style="background-color: #212529; color:white ">
+  <center>{% include "pagination.html" with page=posts %}</center>
+  <a href="#top">Volver al inicio&nbsp;<i class="fas fa-angle-double-up"></i></a>
+
+
 
 </footer>
      
