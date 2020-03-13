@@ -7,9 +7,11 @@ cycler==0.10.0
 dj-database-url==0.5.0
 Django==2.2.2
 django-appconf==1.0.3
+django-ckeditor==5.9.0
 django-crispy-forms==1.8.1
 django-imagekit==4.0.2
 django-instagram==0.3.1
+django-js-asset==1.2.2
 django-storages==1.7.2
 django-taggit==1.2.0
 docutils==0.15.2
