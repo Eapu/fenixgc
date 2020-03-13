@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
-
+from ckeditor.fields import RichTextField
 
 class PublishedManager(models.Manager):
 
@@ -21,7 +21,7 @@ class Post(models.Model):
 	author = models.ForeignKey(User, related_name='blog_posts', on_delete=models.CASCADE)
 	image = models.FileField(null=True, blank=True)
 	link = models.URLField(blank=True, null=True)
-	body = models.TextField(blank=True)
+	body = RichTextField(blank=True)
 	publish = models.DateTimeField(default=timezone.now)
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)

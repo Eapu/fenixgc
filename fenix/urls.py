@@ -6,6 +6,7 @@ admin.site.site_header = 'Fenix Gran Canaria'                    # default: "Dja
 admin.site.index_title = 'Fenix'                 # default: "Site administration"
 admin.site.site_title = 'Fenix' # default: "Django site admin"
 urlpatterns = [
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('green.urls')),
     url(r'^', include('upload.urls')),

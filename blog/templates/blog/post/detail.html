@@ -28,7 +28,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <span class="w3-opacity" style="float: right;">{{ post.author }},&nbsp;{{ post.publish|date:"M d-Y"}}</span>
     </div>
     <div class="w3-container">
-      <p>{{ post.body |linebreaks}}</p> 
+      <p>{{ post.body |safe}}</p> 
       {% if post.link %}
         <a target="_blank" rel="noopener noreferrer" href="{{ post.link }}"> <button class="w3-button w3-white w3-border w3-border-gray">Ver enlance</button></p></a>
          {% endif %}

@@ -36,7 +36,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container">
-      <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+      <p>{{ post.body|truncatewords:30|safe }}</p>
                 Etiqueta:{% for tag in post.tags.all %}
        &nbsp;<a href="{% url "blog:post_list_by_tag" tag.slug %}" style="text-decoration: underline;"><strong>{{  tag.name }}</strong></a> 
        {% if not forloop.last %}, {% endif %}

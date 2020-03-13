@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'ckeditor',
     'django.contrib.staticfiles',
     'green',
     'taggit',
@@ -130,7 +131,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+SITE_ID = 1
 
+####################################
+    ##  CKEDITOR CONFIGURATION ##
+####################################
+ 
+
+
+###################################
 S3UTILS_DEBUG_LEVEL=1
 AWS_STORAGE_BUCKET_NAME = 'elenacube'
 AWS_S3_REGION_NAME = 'eu-west-1'  # e.g. us-east-2
@@ -163,3 +172,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
 MEDIA_URL = S3_URL + 'media/'
 STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_RESTRICT_BY_USER = True
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Advanced',
+        'width': 758,
+        'height': 300,
+    },
+}
