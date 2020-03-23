@@ -26,7 +26,7 @@ class Usuarios(models.Model):
 	uploaded_at = models.DateTimeField(auto_now_add=True)
 	upload = models.FileField()
 	totem = models.CharField(max_length=50, choices=TOTEM_CHOICES, default='Mirador de La Cilla')
-	email = models.CharField(max_length=20,null=True, blank=True)
+	email = models.CharField(max_length=50,null=True, blank=True)
 
 	def image_tag(self):
 		return mark_safe('<img src="%s" width="130px"  />' % (self.upload.url))  # Get Image url
