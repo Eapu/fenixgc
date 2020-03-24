@@ -74,14 +74,15 @@ img {
     image-orientation: from-image;
 }
 .footer {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #212529;
-   color: white;
-   text-align: center;
-}   
+  
+    width: 100%; 
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    bottom: 0pt;
+    left: 0pt;
 
+}   
 
 .container2 {
   position: relative;
@@ -388,12 +389,22 @@ display: -webkit-box;
           
 </body>
 
- <div class="footer">
-        <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.webp" alt="" " style="width: 5%; border-radius: 4%;" >&nbsp;&nbsp;&nbsp;&nbsp; 
-        <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fred-min.webp" alt="" " style="width: 25%; " > &nbsp;&nbsp;&nbsp;&nbsp;         
-        <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.webp" alt="" " style="width: 5%;border-color: white;border-radius:4%;" ><br>
-        <p class="text-muted small mb-4 mb-lg-0">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</p>
- </div>
+ <!-- Footer -->
+  <footer class="footer bg" style="background-color: #212528">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
+     
+          <center>    <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.webp" alt="" " style="width: 11%; border-radius: 4%;margin-right: 40" >
+              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fred-min.webp" alt="" " style="width: 50%;" >
+            
+              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.webp" alt="" " style="width: 11%;border-color: white;border-radius:4%;" >
+            <br><br>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</p></center>
+        </div>
+       </div>
+       </div> 
+  </footer>
     <!-- Bootstrap core JS -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
