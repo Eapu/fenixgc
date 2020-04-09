@@ -1,9 +1,79 @@
-{% extends "blog/base.html" %}
 {% load blog_tags %}
 {% load static from staticfiles %}
 {% load crispy_forms_tags %}
+<!DOCTYPE html>
+{% load blog_tags %}
+{% load static from staticfiles %}
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-{% block content %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
+
+</head>
+<style>
+ 
+
+
+
+a { text-decoration: none; }
+
+body,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+h1,h2,h3 {font-family: 'Roboto', sans-serif; color: #212529}
+
+.nav {
+  color: #212529;
+  background-color: #102329;
+  font-size: 20px;
+  height: 61px;
+  position: fixed;
+  width: 100%;
+  float: left;
+
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #212529;
+}
+
+li.nav {
+  float: left;
+}
+
+li.nav a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+#fixed_about{
+   position: fixed;
+
+}
+.myfieldclass{
+  background-color: #FAFAF7;
+  border-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+}
+</style>
+<body class="w3-light-grey">
+
+<a name="top"></a>
+
 <ul class="nav">
   <li class="nav"><a class="active" href="/blog" style="color: #EEC534">FENIX</a></li>
 </ul>
@@ -137,4 +207,15 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
 
-{% endblock %}
+</body>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155307635-1');
+</script>
+</html>
