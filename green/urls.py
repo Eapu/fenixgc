@@ -13,5 +13,7 @@ urlpatterns = [
   	url(r'^mapa/', views.indexmap, name='indexmap'),
 	url(r'^fenixgram/', views.fenixgram, name='fenixgram'),
 	url(r'^fenixgram/', views.fenixgram, name='fenixgram'),
+	url(r'^privacidad/', views.privacidad, name='privacidad'),
+	url(r'^cookies/', views.cookies, name='cookies'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

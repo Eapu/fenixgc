@@ -34,9 +34,11 @@ def fenixgram(request, tag_slug=None):
              posts14 = Doña_Paca.published.all()
              posts15 = Galaz.published.all()
              posts16 = Pajaritos.published.all()
-
-
-
              return render(request,'green/fenixgram.html',  {'posts': posts,'posts2': posts2,'posts3': posts3,'posts4': posts4,'posts5': posts5,'posts6': posts6,'posts7': posts7,'posts8': posts8,'posts9': posts9,'posts10': posts10,'posts11': posts11,'posts12': posts12,'posts13': posts13,'posts14': posts14,'posts15': posts15,'posts16': posts16})
+
+def privacidad(request):
+             return render(request,'green/privacidad.html')
+def cookies(request):
+             return render(request,'green/cookies.html')
 
 
