@@ -5,32 +5,29 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
   <meta name="description" content="Contribuye en recuperar el bosque después de un incendio con galería de imágenes y timelapse que nos llevará de viaje por los paisajes de Gran Canaria.">
   <meta name="author" content="fenixgrancanaria">
-
-
   <title>Fenix Gran Canaria</title>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- Custom fonts for this template -->
-  <link rel="stylesheet" type="text/css" href="//elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href="//fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-<link rel="stylesheet" type="text/css" href="//elenacube.s3-eu-west-1.amazonaws.com/static/css/agency.min.css" />
-  <!-- mapbox -->
+  <link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
+  <!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/agency.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
@@ -42,6 +39,7 @@
    header.masthead {
   text-align: center;
   color: white;
+
   background-image: url('//elenacube.s3-eu-west-1.amazonaws.com/static/img/fondofenix-min.png');
 background-size: cover;
 background-repeat: no-repeat;
@@ -137,36 +135,6 @@ width: 40%;
 }
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all ease 0.5s;
-  opacity: 0;
-  background: rgba(59,54,254, 0.4);
-}
-.portfolio-modal .modal-content {
-  padding: 50px 0;
-  text-align: center;
-
-}
-
-.portfolio-modal .modal-content h3 {
-  margin-bottom: 10px;
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 10px;
-}
-.box_insta {
-  background-color: transparent;
-  overflow: hidden;
-  width: 400px;
-  height: 400px;
-  overflow: scroll;
-  border: 0px solid green;
-}
-
 .text {
 overflow: hidden;
 text-overflow: ellipsis;
@@ -174,11 +142,38 @@ display: -webkit-box;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;
 }
-@media (max-width: 767.98px) {
+h6 {font-size: 0.9em; }
 
-  video {width: 80%;}
-
+.fa {
+  font-size: 20px;
+  text-decoration: none;
+  color: gray;
 }
+
+
+ .foot{
+  color:gray;
+  text-align: left;
+  margin-left: 60px;
+  font-family: "Kelly+Slab", sans-serif
+
+
+  }
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 23.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
 </head>
 
@@ -209,7 +204,7 @@ display: -webkit-box;
             <a class="nav-link js-scroll-trigger" href="{% url 'blog:post_list' %}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="//gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Suscríbete</a>
+            <a class="nav-link js-scroll-trigger" href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Suscríbete</a>
           </li>
         </ul>
       </div>
@@ -225,7 +220,6 @@ display: -webkit-box;
       </div>
     </div>
   </header>
-
 
   <!-- Services -->
   <section class="page-section" id="services">
@@ -246,7 +240,7 @@ display: -webkit-box;
       </div>
 
   </section>
-       
+            
 <div class="" id="subir">
   <!-- Portfolio Grid -->
   <section class="bg-light page-section" id="portfolio">
@@ -260,7 +254,7 @@ display: -webkit-box;
               </div>
             </div>       
             <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="//elenacube.s3-eu-west-1.amazonaws.com/static/img/81397838_1072903113052357_1571614390345720956_n.jpg
-" alt=""> 
+" alt="">
           </a>               
           <div class="portfolio-caption">
             <h3>Nuestros totems</h3>
@@ -295,7 +289,7 @@ display: -webkit-box;
 </center>
   </section>
  
-    <section class=" page-section" id="mapa">
+    <section class=" page-section" id="mapa" style="padding-bottom: 0px;">
     <div class="container" id="mapa">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -311,85 +305,109 @@ display: -webkit-box;
     <div class="texto">VER MAPA</div></a>
 </div>
 </section>
-
-  <!-- Contact -->
-
   <!-- Call to Action -->
-  <section class="call-to-action text-dark text-center" style="padding-top: 0px;" >
+  <section class="call-to-action text-dark text-center" style="padding-top: 100px;padding-bottom: 0px;" >
     <div class="container">
       <div class="row">
         <div class="col-xl-8 mx-auto">
          <ul class="list-inline mb-0">
-            <h4 class="mb-4"style ="color: #343A40">Síguenos en:</h4>
+          <h4 class="mb-4"style ="color: #343A40">Síguenos en:</h4>
           <li class="list-inline-item mr-3">   
-            <a target="_blank" rel="noopener noreferrer" href="//instagram.com/fenixgrancanaria" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
-            </li>
+           <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/fenixgrancanaria" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
+          </li>
           <li class="list-inline-item mr-3">
-          <a target="_blank" rel="noopener noreferrer" href="//twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+           <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
+          </li>
+          <li class="list-inline-item">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
             </li>
-            <li class="list-inline-item">
-              <a target="_blank" rel="noopener noreferrer" href="//www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
-              </a>
-            </li>
-          </ul><br>
+          </ul>
+          <br>
         </div>
         <div class="col-xl-8 mx-auto">
          <h5 class="mb-4" id="contacto">o suscríbete para estar al día y entrarás en el sorteo de material exclusivo Fenix!!</h5>
          <center>
-        <img src="//elenacube.s3-eu-west-1.amazonaws.com/media/fenix_regalos-min.png" alt="" style="width: 70%"></center><br>
-         <form action="//gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
-          <div class="form-row">
-        <div class="col-xl-6 mx-auto">
-              <div id="mc_embed_signup_scroll">
-
-                <input type="email" value="" name="EMAIL" class="form-control form-control" id="mce-EMAIL" placeholder="Introduce tu correo electrónico..." required>
-              </div><br>
-
+         <img src="//elenacube.s3-eu-west-1.amazonaws.com/media/fenix_regalos-min.png" alt="" style="width: 70%"></center><br>
+         <form action="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
+         <div class="form-row">
+          <div class="col-xl-6 mx-auto">
+            <div id="mc_embed_signup_scroll">
+            <input type="email" value="" name="EMAIL" class="form-control form-control" id="mce-EMAIL" placeholder="Introduce tu correo electrónico..." required>
+            </div><br>
            <div class="col-xl-8 mx-auto" >
-               <div class="clear"> <button type="submit" class="btn btn-outline-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
-            </div> 
-
-          </div>  
-
+            <div class="clear">
+              <button type="submit" class="btn btn-outline-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button>
+            </div>
+          </div> 
+         </div>  
         </div>
-        </form><br>
-
-  
+        </form>
         </div>
       </div>
-    </div><br>
-    
-  </section><br><br>
+    </div>   
+  </section>
 
            
           
-</body>
+</body><br><br>
+<div class="w3-container" style="background-color:#F3F3F3"><br><br><br>
+  <center><h3><stron>PATROCINADORES</stron></h3></center><br>
+<br><br>
+  <div class="w3-row ">
+<div class="w3-third w3-container "><center>
+ <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.png" alt="" style="width: 40%; border-radius: 4%"> </center>
+</div>
+<div class="w3-third w3-container"><center>
+ <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/logo_fred-olsen-2.png" alt="" style="width: 55%;" ></center>
+</div>
+<div class="w3-third w3-container"><center>
+  <h2><img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.png" alt="" style="width: 40%" ></h2></center><br><br><br>
+</div>
+</div></div>
 
- <!-- Footer -->
-  <footer class="footer bg" style="background-color: #212528">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
-     
-          <center>    <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.png" alt="" " style="width: 11%; border-radius: 4%;margin-right: 40" >
-              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fred-min.png" alt="" " style="width: 50%;" >
-            
-              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.png" alt="" " style="width: 11%;border-color: white;border-radius:4%;" >
-            <br><br>
-          <p class="text-muted small mb-4 mb-lg-0"><a href="{% url 'green:privacidad' %}">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</p></a></center>
-        </div>
-       </div>
-       </div> 
-  </footer>
+<!-- Footer -->
+<footer class="w3-container  w3-padding-32 " style="background-color: #212529; color:white">
+  <div class="row">
+  <div class="w3-col m3 w3">
+    <center>
+    <p style="font-size: 15px;color: #EEC534;text-align: left;margin-left: 60px">SECCIONES</p>
+    <a href="{% url 'green:index' %}#services" style="text-decoration: none; line-height: "><h6 class="foot" style="line-height: 25px">Sobre el proyecto</h6></a>
+    <a href="{% url 'upload:create' %}" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Sube una foto</h6></a>
+    <a href="{% url 'green:indexmap' %}#mapa" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Ver totems en mapa</h6></a>
+    <a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Hazte embajador</h6></center></a>
+
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">LEGAL</p>
+   <center> 
+ 
+    <a href="{% url 'green:privacidad' %}" style="text-decoration: none;"><h6 class="foot"style="line-height: 25px">Política de Privacidad</h6></a>
+    <a href="{% url 'green:cookies' %}" style="text-decoration: none;"> <h6 class="foot"style="line-height: 25px">Política de Cookies</h6></a>
+   </center>
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">SOCIAL</p>
+   <center>
+    <h6 class="foot" style="line-height: 25px"><a href="https://instagram.com/fenixgrancanaria" class="fa fa-instagram"></a>&nbsp;Instagram</h6>
+    <h6 class="foot" style="line-height: 25px"><a href="https://twitter.com/fenixgrancan" class="fa fa-twitter"></a>&nbsp;Twitter</h6>
+    <h6 class="foot"style="line-height: 25px"><a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook"></a>&nbsp;Facebook</h6></center>
+  </div>
+    <div class="w3-col m3 w3">
+      <br>
+    <img  src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_gray-min.png" style="width: 65px;margin-left: 50px;margin-top: 10px">
+  </div>
+
+</div><h6 class="foot" style="line-height: 25px"><a href="{% url 'green:privacidad' %}" style="text-decoration: none;color: gray;margin-left: -13px">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</h6></a>
+</footer>
     <!-- Bootstrap core JS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- Custom scripts for this template -->
-  <script src="//elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 <!-- Defer images -->
 <script>
 function init() {
@@ -401,7 +419,7 @@ imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
 window.onload = init;
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -413,13 +431,3 @@ window.onload = init;
 
 
 
-
-
-
-
-
-<!-- Begin Mailchimp Signup Form -->
-
-
-
-<!--End mc_embed_signup-->
