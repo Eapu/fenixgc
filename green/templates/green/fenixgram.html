@@ -1,39 +1,35 @@
 {% load static from staticfiles %}
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% load instagram_client %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Contribuye en recuperar el bosque después de un incendio con galería de imágenes y timelapse que nos llevará de viaje por los paisajes de Gran Canaria.">
+  <meta name="author" content="fenixgrancanaria">
   <title>Fenix Gran Canaria</title>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
   <!-- Custom fonts for this template -->
-  <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" />
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Custom styles for this template -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/agency.min.css' %}" />
-  <!-- mapbox -->
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/agency.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
+<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
   #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 
@@ -43,13 +39,20 @@
    header.masthead {
   text-align: center;
   color: white;
- background-image: url('https://elenacube.s3-eu-west-1.amazonaws.com/static/img/bark-min.webp');
-  background-attachment: fixed;
 
-
+  background-image: url('//elenacube.s3-eu-west-1.amazonaws.com/static/img/fondofenix-min.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: 50% 50%;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+content: "";
+z-index: 0;
 
 }
-
 #mainNav .navbar-brand {
   color: #fed136;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -61,96 +64,125 @@
   padding: 3px;
 
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  position: absolute;
+html {
+  scroll-behavior: smooth;
+}
+img {
+    image-orientation: from-image;
+}
+.footer {
+  
+    width: 100%; 
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    bottom: 0pt;
+    left: 0pt;
+
+}   
+
+.container2 {
+  position: relative;
+}
+
+.image2 {
+  opacity: 1;
+  display: block;
   width: 100%;
-  height: 100%;
-  transition: all ease 0.5s;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
   opacity: 0;
-  background: rgba(59,54,254, 0.4);
-}
-header.masthead .intro-text {
-  padding-top: 130px;
-  padding-bottom: 100px;
-}
-.page-section h3.section-subheading {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.projects-section {
-  padding: 10rem 0;
-}
-
-.projects-section .featured-text {
-  padding: 2rem;
-}
-
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
-}
-
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
-  .projects-section .project-text hr {
-    border-color: #64a19d;
-    border-width: .25rem;
-    width: 30%;
-  }
-}
-    #features {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
-        overflow: auto;
-        background: rgba(255, 255, 255, 0.8);
-    }
-    #map canvas {
-        cursor: crosshair;
-    }
-
-}
-
-.intro-lead-in {
-  font-size: 15px;
-  font-style: italic;
-  line-height: 22px;
-  margin-bottom: 25px;
-  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-}
-.portfolio-modal .modal-content {
-  padding: 50px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
-
-}
-.portfolio-modal .modal-content h3 {
-  margin-bottom: 10px;
 }
 
-.portfolio-modal .modal-content p {
-  margin-bottom: 10px;
+.container2:hover .image2 {
+  opacity: 0.5;
+
 }
+
+.container2:hover .middle {
+  opacity: 2;
+}
+
+.texto {
+  background-color: #067CFF;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+@media (max-width: 40em) {
+.screen_image {
+display: none;
+}
+}
+
+@media (min-width: 992px) {
+.image2 {
+width: 40%;
+
+}
+}
+
+.text {
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}
+h6 {font-size: 0.9em; }
+
+.fa {
+  font-size: 20px;
+  text-decoration: none;
+  color: gray;
+}
+
+
+ .foot{
+  color:gray;
+  text-align: left;
+  margin-left: 60px;
+  font-family: "Kelly+Slab", sans-serif
+
+
+  }
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 23.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
 </head>
 
 <body id="page-top">
 
-   <!-- Navigation -->
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="/">FENIX </a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
         
         <i class="fa fa-bars" style="color: #FED236;font-size:20px"></i>
@@ -436,38 +468,9 @@ header.masthead .intro-text {
 
       </section>
 
-
-
-           
-           
- <!-- Footer -->
-  <footer class="footer bg" style="background-color: #212528">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-          <ul class="list-inline mb-2">
-            <li class="list-inline-item">
-              <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.webp" alt="" " style="width: 11%; border-radius: 4%;margin-right: 40" >
-              <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/fred.png" alt="" " style="width: 40%; border-radius: 4%" >
-            
-              <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/aya.png" alt="" " style="width: 11%;border-color: white;border-radius:4%;" >
-            </li>
-          </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; 2019 Parque Forestal CB. Todos los derechos reservados.</p>
-        </div>
-       </div>
-       </div> 
-  </footer>
-  
-
-  <!-- Bootstrap core JavaScript -->
-
-  <!-- Custom scripts for this template -->
-  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
-
 </body>
 
-</html>
+   
 
     <!-- Modals -->
     <!-- Degollada_del_Humo -->
@@ -1064,21 +1067,59 @@ header.masthead .intro-text {
     </div>
   </div>
 
+<!-- Footer -->
+<footer class="w3-container  w3-padding-32 " style="background-color: #212529; color:white">
+  <div class="row">
+  <div class="w3-col m3 w3">
+    <center>
+    <p style="font-size: 15px;color: #EEC534;text-align: left;margin-left: 60px">SECCIONES</p>
+    <a href="{% url 'green:index' %}#services" style="text-decoration: none; line-height: "><h6 class="foot" style="line-height: 25px">Sobre el proyecto</h6></a>
+    <a href="{% url 'upload:create' %}" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Sube una foto</h6></a>
+    <a href="{% url 'green:indexmap' %}#mapa" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Ver totems en mapa</h6></a>
+    <a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Hazte embajador</h6></center></a>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">LEGAL</p>
+   <center> 
+ 
+    <a href="{% url 'green:privacidad' %}" style="text-decoration: none;"><h6 class="foot"style="line-height: 25px">Política de Privacidad</h6></a>
+    <a href="{% url 'green:cookies' %}" style="text-decoration: none;"> <h6 class="foot"style="line-height: 25px">Política de Cookies</h6></a>
+   </center>
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">SOCIAL</p>
+   <center>
+    <h6 class="foot" style="line-height: 25px"><a href="https://instagram.com/fenixgrancanaria" class="fa fa-instagram"></a>&nbsp;Instagram</h6>
+    <h6 class="foot" style="line-height: 25px"><a href="https://twitter.com/fenixgrancan" class="fa fa-twitter"></a>&nbsp;Twitter</h6>
+    <h6 class="foot"style="line-height: 25px"><a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook"></a>&nbsp;Facebook</h6></center>
+  </div>
+    <div class="w3-col m3 w3">
+      <br>
+    <img  src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_gray-min.png" style="width: 65px;margin-left: 50px;margin-top: 10px">
+  </div>
 
-  <!-- Plugin JavaScript -->
-  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-  <!-- Contact form JavaScript -->
-  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-
-  <script src="{% static 'js/contact_me.js' %}"></script>
-
+</div><h6 class="foot" style="line-height: 25px"><a href="{% url 'green:privacidad' %}" style="text-decoration: none;color: gray;margin-left: -13px">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</h6></a>
+</footer>
+    <!-- Bootstrap core JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- Custom scripts for this template -->
-  <script src="{% static 'js/agency.min.js' %}"></script>
+  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<!-- Defer images -->
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
 <script>
@@ -1088,6 +1129,7 @@ header.masthead .intro-text {
 
   gtag('config', 'UA-155307635-1');
 </script>
-</body>
-
 </html>
+
+
+
