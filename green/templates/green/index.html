@@ -33,6 +33,8 @@
 
 <!-- Begin Mailchimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <style type="text/css">
   #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 
@@ -63,7 +65,7 @@ z-index: 0;
 }
 #mainNav {
   background-color: #212529;
-  padding: 3px;
+  padding: 0px;
 
 }
 html {
@@ -123,7 +125,11 @@ img {
   padding: 16px 32px;
 }
 
-
+ .foot{
+  color:gray;
+  text-align: left;
+  margin-left: 60px;
+  }
 @media (max-width: 40em) {
 .screen_image {
 display: none;
@@ -158,14 +164,6 @@ width: 40%;
 .portfolio-modal .modal-content p {
   margin-bottom: 10px;
 }
-.box_insta {
-  background-color: transparent;
-  overflow: hidden;
-  width: 400px;
-  height: 400px;
-  overflow: scroll;
-  border: 0px solid green;
-}
 
 .text {
 overflow: hidden;
@@ -179,6 +177,19 @@ display: -webkit-box;
   video {width: 80%;}
 
 }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 767.98px) {
+  .container {
+    padding: 90px 30px 50px 30px !important;    
+  }
+  h1 {font-size: 2em;}
+  h3 {font-size: 1em; }
+
+}
 </style>
 </head>
 
@@ -186,19 +197,15 @@ display: -webkit-box;
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
-     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
-        
+    <a class="navbar-brand js-scroll-trigger" href="#page-top" style="padding-left: 20px">FENIX </a>
+     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">  
         <i class="fa fa-bars" style="color: #FED236;font-size:20px"></i>
-
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse" id="navbarResponsive" style="padding-left: 20px">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services"></a>
-          </li>
- 
+          </li> 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
           </li>
@@ -282,6 +289,7 @@ display: -webkit-box;
            </div>
        
       </div>
+
       <center>
         <div class="row">
         <div class="col-lg-12 text-center">
@@ -364,23 +372,56 @@ display: -webkit-box;
            
           
 </body>
+<br><br>
+<div class="w3-container" style="background-color:#F3F3F3"><br><br><br>
+  <center><h3><stron>PATROCINADORES</stron></h3></center><br>
+<br><br>
+  <div class="w3-row ">
+<div class="w3-third w3-container "><center>
+ <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.png" alt="" style="width: 40%; border-radius: 4%"> </center>
+</div>
+<div class="w3-third w3-container"><center>
+ <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/logo_fred-olsen-2.png" alt="" style="width: 55%;" ></center>
+</div>
+<div class="w3-third w3-container"><center>
+  <h2><img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.png" alt="" style="width: 40%" ></h2></center><br><br><br>
+</div>
+</div></div>
 
- <!-- Footer -->
-  <footer class="footer bg" style="background-color: #212528">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
-     
-          <center>    <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/static/img/gcflogo-min.png" alt="" " style="width: 11%; border-radius: 4%;margin-right: 40" >
-              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fred-min.png" alt="" style="width: 50%;" >
-            
-              <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/aya-min.png" alt="" " style="width: 11%;border-color: white;border-radius:4%;" >
-            <br><br>
-          <p class="text-muted small mb-4 mb-lg-0"><a href="{% url 'green:privacidad' %}">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</p></a></center>
-        </div>
-       </div>
-       </div> 
-  </footer>
+<!-- Footer -->
+<footer class="w3-container  w3-padding-32 " style="background-color: #212529; color:white">
+  <div class="row">
+  <div class="w3-col m3 w3">
+    <center>
+    <p style="font-size: 15px;color: #EEC534;text-align: left;margin-left: 60px">SECCIONES</p>
+    <a href="{% url 'green:index' %}#services" style="text-decoration: none; line-height: "><h6 class="foot" style="line-height: 25px">Sobre el proyecto</h6></a>
+    <a href="{% url 'upload:create' %}" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Sube una foto</h6></a>
+    <a href="{% url 'green:indexmap' %}#mapa" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Ver totems en mapa</h6></a>
+    <a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2" style="text-decoration: none;"><h6 class="foot" style="line-height: 25px">Hazte embajador</h6></center></a>
+
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">LEGAL</p>
+   <center> 
+ 
+    <a href="{% url 'green:privacidad' %}" style="text-decoration: none;"><h6 class="foot"style="line-height: 25px">Política de Privacidad</h6></a>
+    <a href="{% url 'green:cookies' %}" style="text-decoration: none;"> <h6 class="foot"style="line-height: 25px">Política de Cookies</h6></a>
+   </center>
+  </div>
+  <div class="w3-col m3 w3">
+    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px">SOCIAL</p>
+   <center>
+    <h6 class="foot" style="line-height: 25px"><a href="https://instagram.com/fenixgrancanaria" class="fa fa-instagram"></a>&nbsp;Instagram</h6>
+    <h6 class="foot" style="line-height: 25px"><a href="https://twitter.com/fenixgrancan" class="fa fa-twitter"></a>&nbsp;Twitter</h6>
+    <h6 class="foot"style="line-height: 25px"><a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook"></a>&nbsp;Facebook</h6></center>
+  </div>
+    <div class="w3-col m3 w3">
+      <br>
+    <img  src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_gray-min.png" style="width: 65px;margin-left: 50px;margin-top: 10px">
+  </div>
+
+</div><h6 class="foot" style="line-height: 25px"><a href="{% url 'green:privacidad' %}" style="text-decoration: none;color: gray;margin-left: -13px">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</h6></a>
+</footer>
     <!-- Bootstrap core JS -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
