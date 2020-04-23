@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet">
+<link href= "https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/sorteo/main.css" 
+    rel="stylesheet">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://elenacube.s3-eu-west-1.amazonaws.com/fenix/sorteo_rec.png");
+  min-height: 600px;
+  margin-top: -50px
+}
+
+.bgimg-2 {
+  background-image: url("https://elenacube.s3.amazonaws.com/media/triangles_geometric_mosaic_125451_1280x720.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("img_parallax3.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+  .video{
+    width: 80%;
+  }
+.bird{
+  width: 3%
+}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+  .image{
+      padding: 18px;
+
+  }
+  .video{
+    width: 100%;
+  }
+    .bird{
+    width: 10%;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">SORTEO!</span>
+  </div>
+</div>
+
+      <section id="one" class="wrapper style1" style="background-color: #F5F5F5">
+        <div class="inner">
+          <article class="feature left">
+            <center><span class="image" style="width: 70%"><img src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_merchan_min.webp" alt=""  /></span></center>
+            <div class="content">
+              <h2>Participar en Fenix tiene su recompensa.</h2>
+              <p>Sólo con registrarte recibirás una guía exclusiva con senderos e información de interés para que disfrutes descubriendo la cumbre Gran Canaria.</br>Además, sortearemos material exclusivo Fenix que te ayudará en tus salidas de campo.Para entrar en el sorteo tendrás que subir tus fotos a nuestra web. Cuantas más fotos envíes podrás conseguir mejores premios.Empieza ya y descarga tu guía.</p>
+              <ul class="actions">
+                <li>
+                  <a href="#" class="button alt">Suscríbete</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+       <!-- Services -->
+
+  <section class="page-section" id="services" style="background-color: white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center"><br><br>
+          <h3 class="section-heading text-uppercase"><img class="bird" src=" https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fenix_simp.png" ">¿Cómo puedo participar en el sorteo?</h3>
+        <br>
+              
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto1-min.webp" alt="" style="width: 120px">
+
+          </span><br>
+          <p class="text-muted"> Hemos instalado 'totems' de madera <a href="{% url 'green:indexmap' %}"><strong> ubicados</strong></a> a lo largo de senderos y miradores que atraviesan zonas quemadas.</p>
+
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto-min.png" alt="" style="width: 113px"><br>
+
+          </span>
+          <p class="text-muted">Coloca tu teléfono en los 'totems', saca una foto y compartela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook. </p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto2-min.webp" alt="" style="width: 150px">
+
+          </span><br>
+          <p class="text-muted"> Recopilamos las fotos y creamos una galería y su <strong>cambio a lo largo del tiempo.</strong> También puedes subir tu foto directamente <a href="{% url 'upload:create' %}"><strong> desde esta web!</strong></a> </p>
+          <br><br>  <br><br>
+        </div>
+<a href="/"><h4> < VOLVER</h4></a>
+
+  </section>
+       
+  <!-- Footer -->
+  <footer class="footer bg-light" style="background-color: #F4F4F4">
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+
+          
+          <p class="text-muted small mb-4 mb-lg-0">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="{% url 'green:privacidad' %}"><h5>Política de Privacidad</h5></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{% url 'green:cookies' %}"><h5>Política de Cookies</h5></a>
+            </li>
+          </ul>
+
+
+<br>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+</html>

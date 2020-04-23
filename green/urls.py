@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url, include
 from . import views
-from .views import fenixgram, indexmap
+from .views import fenixgram, indexmap,sorteo
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -13,6 +13,7 @@ urlpatterns = [
   	url(r'^mapa/', views.indexmap, name='indexmap'),
 	url(r'^fenixgram/', views.fenixgram, name='fenixgram'),
 	url(r'^fenixgram/', views.fenixgram, name='fenixgram'),
+	url(r'^sorteo/', views.sorteo, name='sorteo'),
 	url(r'^privacidad/', views.privacidad, name='privacidad'),
 	url(r'^cookies/', views.cookies, name='cookies'),
 

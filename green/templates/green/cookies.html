@@ -1,118 +1,5 @@
-<!DOCTYPE html>
-{% load blog_tags %}
-{% load static from staticfiles %}
-
-<html>
-<title>Fenix Gran Canaria</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kelly+Slab|Rakkas&display=swap" rel="stylesheet">
-<style>
- 
-
-body,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-h1,h2,h3 {font-family: 'Roboto', sans-serif; color: #212529}
-h6 {font-size: 0.9em; }
-.nav {
-  color: #212529;
-  background-color: #102329;
-  font-size: 20px;
-  height: 61px;
-  position: fixed;
-  width: 100%;
-  float: left;
-
-}
-.fa {
-  font-size: 20px;
-  text-decoration: none;
-}
-
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #212529;
-}
-
-li.nav {
-  float: left;
-}
-
-li.nav a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-  hr {
-  border-top: 1px solid gray;
-}
-* {
-  box-sizing: border-box;
-}
- .foot{
-  color:gray;
-  text-align: left;
-  margin-left: 60px;
-  }
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 23.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (max-width: 767.98px) {
-  .container {
-    padding: 90px 30px 50px 30px !important;    
-  }
-  h1 {font-size: 2em;}
-  h3 {font-size: 1em; }
-  table {
-  width: 108% !important;
-}
-td, th {
-
-  padding: 3px!important;
-}
-
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-<body class="w3-light-grey">
-
-
-<ul class="nav">
-  <li class="nav"><a class="active" href="/" style="color: #EEC534">FENIX</a></li>
-</ul>
+{% extends "green/base.html" %}
+{% block content %}
  <div class="container" style="padding: 90px 130px 50px 130px" > 
 
 
@@ -128,19 +15,19 @@ Una cookie es inofensiva, no contiene código malicioso o malintencionado (ej. v
     
     <h3>¿Qué tipo de cookies existen?</h3>
 Con carácter general, existen cinco tipos de cookies:
-<h5>Cookies técnicas</h5>
+<h4>Cookies técnicas</h4>
 Son las cookies más básicas. Permiten al usuario la navegación a través de una página web, plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de videos o sonido o compartir contenidos a través de redes sociales.
-<h5>Cookies de personalización</h5>
+<h4>Cookies de personalización</h4>
 Son aquéllas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma, el tipo de navegador a través del cual accede al servicio, la configuración regional desde donde accede al servicio, etc.
-<h5>Cookies de análisis</h5>
+<h4>Cookies de análisis</h4>
 Son aquéllas que permiten al responsable de las mismas, el seguimiento y análisis del comportamiento de los usuarios de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los usuarios de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los usuarios del servicio.
-<h5>Cookies publicitarias</h5>
+<h4>Cookies publicitarias</h4>
 Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el responsable haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado en base a criterios como el contenido editado o la frecuencia en la que se muestran los anuncios.
-<h5>Cookies de publicidad comportamental</h5>
+<h4>Cookies de publicidad comportamental</h4>
 Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el responsable haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado. Estas cookies almacenan información del comportamiento de los usuarios obtenida a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar publicidad en función del mismo.
 
     <h3>¿Qué son las cookies propias y las de terceros?</h3>
-<h5>Cookies de propias</h5>
+<h4>Cookies de propias</h4>
 Las cookies propias son aquellas que se generan y gestionan por el propio responsable que presta el servicio solicitado por el usuario.
 Cookies de terceros
 Son aquellas que se generan por otras entidades distintas al propio responsable (servicios o proveedores externos, como por ejemplo Google).
@@ -186,44 +73,4 @@ A continuación, le facilitamos los enlaces para la gestión y bloqueo de cookie
 
  </div>
 </div>   
-<!-- Footer -->
-<footer class="w3-container  w3-padding-32 w3-margin-top" style="background-color: #212529; color:white ">
-  <div class="row">
-  <div class="w3-col m3 w3">
-    <center>
-    <p style="font-size: 15px;color: #EEC534;text-align: left;margin-left: 60px"><strong>SECCIONES</strong></p>
-    <a href="{% url 'green:index' %}#services" style="text-decoration: none;"><h6 class="foot">Sobre el proyecto</h6></a>
-    <a href="{% url 'upload:create' %}" style="text-decoration: none;"><h6 class="foot">Sube una foto</h6></a>
-    <a href="{% url 'green:indexmap' %}#mapa" style="text-decoration: none;"><h6 class="foot">Ver totems en mapa</h6></a>
-    <a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2" style="text-decoration: none;"><h6 class="foot">Hazte embajador</h6></center></a>
-
-  </div>
-  <div class="w3-col m3 w3">
-    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px"><strong>LEGAL</strong></p>
-   <center> 
- 
-    <a href="{% url 'green:privacidad' %}" style="text-decoration: none;"><h6 class="foot">Política de Privacidad</h6></a>
-    <a href="" style="text-decoration: none;"> <h6 class="foot">Política de Cookies</h6></a>
-   </center>
-  </div>
-  <div class="w3-col m3 w3">
-    <p style="font-size: 15px;color: #EEC534 ;text-align: left;margin-left: 60px"><strong>SOCIAL</strong></p>
-   <center>
-    <h6 class="foot"><a href="https://instagram.com/fenixgrancanaria" class="fa fa-instagram"></a>&nbsp;Instagram</h6>
-    <h6 class="foot"><a href="https://twitter.com/fenixgrancan" class="fa fa-twitter"></a>&nbsp;Twitter</h6>
-    <h6 class="foot"><a href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook"></a>&nbsp;Facebook</h6></center>
-  </div>
-    <div class="w3-col m3 w3">
-      <br>
-    <img  src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_gray-min.png" style="width: 65px;margin-left: 50px;margin-top: 10px">
-  </div>
-</div>
-<h6 class="foot"><a href="{% url 'green:privacidad' %}" style="text-decoration: none;">&copy; 2020 Parque Forestal CB. Todos los derechos reservados.</h6></a>
-</footer>
-     
-
- 
-
-</body>
-
-</html>
+  {% endblock %}

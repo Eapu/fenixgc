@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Contribuye en recuperar el bosque después de un incendio con galería de imágenes y timelapse que nos llevará de viaje por los paisajes de Gran Canaria.">
+  <meta name="author" content="fenixgrancanaria">
+  <title>Fenix Gran Canaria</title>    <meta charset="utf-8" />
+  <!-- css for this web -->
+  <link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/main.css" />
+  <noscript><link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/noscript.css" /></noscript>
+  <!-- bootstrap + jquery-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+  html {
+  scroll-behavior: smooth;
+}
+  #header { 
+    background-image: url('https://elenacube.s3-eu-west-1.amazonaws.com/fenix/new_fondo_jumbo-min.png')!important;
+    width:100%;}
+      .header2 { 
+    background-image: url('https://elenacube.s3.amazonaws.com/media/ws_Mysterious_Forest_Leaves_Light_1920x1200.jpg')!important;
+    height:100%;
+      background-size:cover!important;
+}
+  
+
+  .main.style2 { 
+    background-image: url('https://elenacube.s3-eu-west-1.amazonaws.com/fenix/triangles_geometric_mosaic_125451_1280x720.jpg')!important;
+    background-size:cover!important;
+            }
+  
+  a {border-bottom: none!important;}
+  body, input, select, textarea {
+    color: #666;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 1.65em;
+    }
+  .navbar-toggle  {
+    height: 50px;
+
+  }
+  .navbar-brand {
+  padding: 15px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  @media (max-width: 767.98px)
+  {
+  .navbar-brand {
+  padding: 20px;
+  }
+
+  .call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
+
+  </style>
+</head>
+  <body class="is-preload">
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">FENIX</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" > 
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'green:indexmap' %}">Mapa</a></li>
+            <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+            <li><a href="{% url 'upload:create' %}">Subir Foto</a></li>
+            <li><a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Suscríbete</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav> 
+    <!-- Header -->
+  {% block content %}
+    {% endblock %}
+  <!-- Footer -->
+  <footer class="footer bg-light" style="background-color: #F4F4F4">
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+
+          
+          <p class="text-muted small mb-4 mb-lg-0">&copy; 2020 Parque Forestal CB. Todos los derechos reservados. <h6>Powered by LNA</h6></p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="{% url 'green:privacidad' %}"><h5>Política de Privacidad</h5></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{% url 'green:cookies' %}"><h5>Política de Cookies</h5></a>
+            </li>
+          </ul>
+
+<br>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.scrolly@0.0.1/jquery.scrolly.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
+  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/breakpoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155307635-1');
+</script>
+  </body>
+
+</html>

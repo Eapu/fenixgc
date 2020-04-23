@@ -1,635 +1,398 @@
-{% load static from staticfiles %}
-{% load instagram_client %}
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <meta name="description" content="Contribuye en recuperar el bosque después de un incendio con galería de imágenes y timelapse que nos llevará de viaje por los paisajes de Gran Canaria.">
-  <meta name="author" content="fenixgrancanaria">
-
-
-  <title>Fenix Gran Canaria</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-  <!-- Custom fonts for this template -->
-  <link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/all.min.css" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-<link rel="stylesheet" type="text/css" href="https://elenacube.s3-eu-west-1.amazonaws.com/static/css/agency.min.css" />
-  <!-- mapbox -->
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-
-</style>
-
-<style type="text/css">
-   header.masthead {
-  text-align: center;
-  color: white;
-
-  background-image: url('https://elenacube.s3-eu-west-1.amazonaws.com/media/fondofenix-min.webp');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: 50% 50%;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-content: "";
-z-index: 0;
-
-}
-#mainNav .navbar-brand {
-  color: #fed136;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 20px;
-
-}
-
-img {
-    image-orientation: from-image;
-}
-.footer {
-  
-    width: 100%; 
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-position: 0% 0%;
-
-    bottom: 0pt;
-    left: 0pt;
-
-}   
-
-
-.container2 {
-  position: relative;
-}
-
-.image2 {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container2:hover .image2 {
-  opacity: 0.5;
-
-}
-
-.container2:hover .middle {
-  opacity: 2;
-}
-
-.texto {
-  background-color: #067CFF;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
-
-@media (max-width: 40em) {
-.screen_image {
-display: none;
-}
-}
-
-@media (min-width: 992px) {
-.image2 {
-width: 40%;
-
-}
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all ease 0.5s;
-  opacity: 0;
-  background: rgba(59,54,254, 0.4);
-}
-.box_insta {
-  background-color: transparent;
-  overflow: hidden;
-  width: 400px;
-  height: 400px;
-  overflow: scroll;
-  border: 0px solid green;
-}
-@media screen and (max-width: 480px) {
-.media_insta {
-    width: 100%;
-     height: 330px;
-    }
-}
-
-.text {
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-}
-
+<meta charset=utf-8 />
+<title>Slideshow gallery in a marker tooltip</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
+ <!-- css for this web -->
+  <link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/main.css" />
+  <noscript><link rel="stylesheet" href="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/assets/noscript.css" /></noscript>
+  <!-- bootstrap + jquery-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- fonts -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:50px; bottom:0; width:100%; }
 </style>
 </head>
+<body>
+<style>
 
-<body id="page-top">
+.popup {
+  text-align:center;
+  }
+.popup .slideshow .image        { display:none; }
+.popup .slideshow .image.active { display:block; }
+.popup .slideshow img {
+  width:100%;
+  }
+.popup .slideshow .caption {
+  background:#eee;
+  padding:10px;
+  }
+.popup .cycle {
+  padding:10px 0 20px;
+  }
+  .popup .cycle a.prev { float:left; }
+  .popup .cycle a.next { float:right; }
+ a {border-bottom: none!important;}
+  body, input, select, textarea {
+    color: #666;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    line-height: 1.65em;
+    }
+  .navbar-toggle  {
+    height: 50px;
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">FENIX </a>
-     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
-        
-        <i class="fa fa-bars" style="color: #FED236;font-size:20px"></i>
+  }
+  .navbar-brand {
+  padding: 15px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  @media (max-width: 767.98px)
+  {
+  .navbar-brand {
+  padding: 20px;
+  }
+  #map { position:absolute; top:60px; bottom:0; width:100%; }
 
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services"></a>
-          </li>
- 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'green:indexmap' %}#mapa">Mapa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'upload:create' %}">Subir foto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'blog:post_list' %}">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Suscríbete</a>
-          </li>
-        </ul>
+}
+
+</style>
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">FENIX</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" > 
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'green:indexmap' %}">Mapa</a></li>
+            <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+            <li><a href="{% url 'upload:create' %}">Subir Foto</a></li>
+            <li><a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">Súscribete</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </div>
-  </nav>
-  <!-- Header -->
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text">
-        <img class="" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_logo0.webp" alt="" style="width:180px"><br><br><br>
+    </nav> 
+<div id='map'></div>
 
+<!-- jQuery is required for this example. -->
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoicGFycXVlZm9yZXN0YWxjYiIsImEiOiJjazJhZDNnZjQyczRvM25ucmhpc3cyeG1uIn0.MnMoc6IjX7juyxHVEkwqtA';
+var map = L.mapbox.map('map')
+  .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
 
-      </div>
-    </div>
-  </header>
+var myLayer = L.mapbox.featureLayer().addTo(map);
 
+var geoJson = {
+  type: 'FeatureCollection',
+  features: [{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6487978, 28.0206194]},
+      "properties": {
+          'title': '',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          // Store the image url and caption in an array.
+          'images': [
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/lacilla-min.png','Mirador de la Cilla <center><a href=\" https://goo.gl/maps/FxRyPN3rfMpnsWeR7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>' ],
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/lacilla2-min.png','Mirador de la Cilla <center><a href=\" https://goo.gl/maps/FxRyPN3rfMpnsWeR7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>'],
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/lacilla3-min.png','Mirador de la Cilla <center><a href=\" https://goo.gl/maps/FxRyPN3rfMpnsWeR7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>']
+          ]
+      }
+  }, {
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6747167, 28.0130406]},
+      "properties": {
+          'title': '',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/degolladahumo-min.png','Degollada del Humo <center><a href=\"https://goo.gl/maps/sm43mbTmtBneUWCT9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>'],
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/degolladahumo2-min.png','Degollada del Humo <center><a href=\"https://goo.gl/maps/sm43mbTmtBneUWCT9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>'],
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/degolladahumo3-min.png','Degollada del Humo <center><a href=\"https://goo.gl/maps/sm43mbTmtBneUWCT9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>']
+          ]
 
-  <!-- Services -->
-  <section class="page-section" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">Sobre el proyecto</h3>
-         <p> <h3 class="section-subheading text-muted">
-       Es una iniciativa que invita a contribuir activamente en la recuperación del entorno forestal con fotografías y medidas de sensibilización.<br><br><center><a href="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&id=78f85116b2">
-        <button href="" type="button" class="btn btn-outline-primary js-scroll-trigger">Suscríbete</button></a></center></h3></p>
-              
-              
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6142591, 27.9989345]},
+      "properties": {
+          'title': '',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/acusa-min.png','Mesa de Acusa <center><a href=\"https://goo.gl/maps/GW3uxW29fLLUb1Pf9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>']
           
+          ]
 
-     
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto1-min.webp" alt="" style="width: 120px">
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6773581, 28.0395998]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://elenacube.s3-eu-west-1.amazonaws.com/fenix/fotos_totems_mapa/tejeda-min.png','Mirador del almendro.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-          </span><br><br>
-          <p class="text-muted"> Hemos instalado 'totems' de madera <a href="{% url 'green:indexmap' %}#mapa"><strong> ubicados</strong></a> a lo largo de senderos y miradores que atraviesan zonas quemadas.</p>
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6584952, 28.0321911]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto-min.png" alt="" style="width: 120px"><br><br>
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6885408, 28.0585012]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-          </span><br><br>
-          <p class="text-muted">Coloca tu teléfono en los 'totems', saca una foto y compartela con hashtag <strong>#fenixgrancanaria</strong> en Twitter, Instagram o Facebook. </p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <img class="" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/foto2-min.webp" alt="" style="width: 120px">
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6785625, 28.0290341]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-          </span><br><br>
-          <p class="text-muted"> Recopilamos las fotos y creamos una galería y su <strong>cambio a lo largo del tiempo.</strong> También puedes subir tu foto directamente <a href="{% url 'upload:create' %}"><strong> desde esta web!</strong></a> </p>
-        </div>
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6896348, 28.0359589]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-  </section>
-       
-         
-        
-        
-<div class="" id="subir">
-  <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
-    <div class="container">
-  
-       <div class="row">
-        <div class="col portfolio-item">
-           <a class="portfolio-link" data-toggle="" href="{% url 'green:fenixgram' %}">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content" >
-              </div>
-            </div>       
-            <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://elenacube.s3-eu-west-1.amazonaws.com/media/totem.webp" alt=""  > 
-          </a>               
-          <div class="portfolio-caption">
-            <h3>Nuestros totems</h3>
-            <p class="text-muted">Colabora con tu foto</p>
-          </div>
-        </div>
-        <div class="col portfolio-item">
-           <a class="portfolio-link" data-toggle="" href="{% url 'blog:post_list' %}">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content" >
-              </div>
-            </div> 
-              <img class="img-fluid" src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fin.webp" id="blog"/>
-             </a>
-             <div class="portfolio-caption">
-             <h3>Nuestro blog</h3>
-             <p class="text-muted">Echa un vistazo a nuestro blog!</p>
-             </div> 
-           </div>
-       
-      </div>
-      <center>
-              <div class="row">
-        <div class="col-lg-12 text-center">
-          <h6 class="section-subheading text-muted"> ¡Únete con una <strong>imagen de cambio! </strong> </h6></p>
-        </div>
-      </div>
-          <a href="{% url 'upload:create' %}" >
-        <button href="" type="button" class="btn btn-outline-primary js-scroll-trigger" >Subir Foto</button></a>
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6196550, 28.0169390]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-  
-</center>
-  </section>
-   
-       <section class="page-section" >
-    
-    <div class="container" id="mapa">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h4 class="section-heading text-uppercase">Localización</h4>
-          <h3 class="section-subheading text-muted"> ¡Ya tenemos <strong>16 'totems' </strong>! </h3></p>
-        </div>
-      </div>
-    </div>
-<center>
-  <div id='map' style='width: 100%; height: 450px;'></div></center></section>
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6102032, 28.0247602]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoicGFycXVlZm9yZXN0YWxjYiIsImEiOiJjazJhZDNnZjQyczRvM25ucmhpc3cyeG1uIn0.MnMoc6IjX7juyxHVEkwqtA';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/parqueforestalcb/ck2ad728q3d8y1cm1i9tfpzc8?optimize=true',
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.5885206, 28.0241610]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
 
-    center: [-15.648069, 28.030149],
-    zoom: 10,
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6191691, 28.0498679]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
+
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.5817765, 28.0172686]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
+
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6077651, 28.0362461]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
+
+      }
+  },{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [-15.6966018,28.060903]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#3c4e5a',
+          'marker-symbol': 'monument',
+          'marker-size': 'medium',
+          'images': [
+            ['https://elenacube.s3.amazonaws.com/media/Mapa.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
+
+      }
+  }
+
+  ]
+};
+
+// Add custom popup html to each marker.
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer;
+    var feature = marker.feature;
+    var images = feature.properties.images
+    var slideshowContent = '';
+
+    for(var i = 0; i < images.length; i++) {
+        var img = images[i];
+
+        slideshowContent += '<div class="image' + (i === 0 ? ' active' : '') + '">' +
+                              '<img src="' + img[0] + '" />' +
+                              '<div class="caption">' + img[1] + '</div>' +
+                            '</div>';
+    }
+
+    // Create custom popup content
+    var popupContent =  '<div id="' + feature.properties.id + '" class="popup">' +
+                            '<h2>' + feature.properties.title + '</h2>' +
+                            '<div class="slideshow">' +
+                                slideshowContent +
+                            '</div>' +
+                            '<div class="cycle">' +
+                                '<a href="#" class="prev">&laquo; Previous</a>' +
+                                '<a href="#" class="next">Next &raquo;</a>' +
+                            '</div>'
+                        '</div>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 200
+    });
 });
 
- 
-map.on('load', function () {
-// Add a layer showing the places.
-map.addLayer({
-"id": "places",
-"type": "symbol",
-"source": {
-"type": "geojson",
-"data": {
-"type": "FeatureCollection",
-"features": [{
-"type": "Feature",
-"image": '',
-"properties": {             
+// Add features to the map
+myLayer.setGeoJSON(geoJson);
 
-"description": "<br><h6><strong>Mirador de la Cilla</strong></h6><center><a href=\" https://goo.gl/maps/FxRyPN3rfMpnsWeR7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
- 'marker-size': 'large',
-"coordinates": [-15.6487978, 28.0206194]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Degollada del Humo</strong></h6><center><a href=\"https://goo.gl/maps/sm43mbTmtBneUWCT9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6809085, 28.0556254]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<br><center><h6><strong>Mesa de Acusa</strong></h6></center><center><a href=\"https://goo.gl/maps/GW3uxW29fLLUb1Pf9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6747167, 28.0130406]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Mirador de Tejeda</strong></h6><center><a href=\"https://goo.gl/maps/a9suHwdjvcfo51GV7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6142591, 27.9989345]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<br><center><h6><strong>Lugarejos</strong></h6></center><center><a href=\"https://goo.gl/maps/s1vexTPjE1Q136jF8\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6773581, 28.0395998]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<center><br><h6><strong>Las Hoyas</strong></h6></center><center><a href=\"https://goo.gl/maps/qsHHHtQVLTacLQtQ8\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6584952, 28.0321911]
-}
-}, {
-"type": "Feature",
-"properties": {
-"description": "<br><h6><center><strong>Área Recreativa Tamadaba</strong></h6></center><center><a href=\"https://goo.gl/maps/uYma7xCZKLqmeRrGA\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6885408, 28.0585012]
-}
-},
-{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Degollada del Sargento</strong></h6><center><a href=\"https://goo.gl/maps/3YAoRHEu17UVVAFw7\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6785625, 28.0290341]
-}
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Cruz de María</strong></h6><center><a href=\"https://goo.gl/maps/JUNnqj7cAKaPcifSA\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6896348, 28.0359589]
-}
+$('#map').on('click', '.popup .cycle a', function() {
+    var $slideshow = $('.slideshow'),
+        $newSlide;
 
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Cuevas del Caballero</strong></h6><center><a href=\"https://goo.gl/maps/YsNsMExELtQezXG19\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [ -15.6196550, 28.0169390]
-}
+    if ($(this).hasClass('prev')) {
+        $newSlide = $slideshow.find('.active').prev();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').last();
+        }
+    } else {
+        $newSlide = $slideshow.find('.active').next();
+        if ($newSlide.index() < 0) {
+            $newSlide = $('.image').first();
+        }
+    }
 
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><center><strong>Fuentefría</strong></center></h6><center><a href=\"https://goo.gl/maps/3VqpwsgQDDWre2ez5\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6102032, 28.0247602]
-}
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><center><strong>Cueva Corcho</strong></center></h6><center><a href=\" https://goo.gl/maps/zQEeu1wp6LjExYkY9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.5885206, 28.0241610]
-}
+    $slideshow.find('.active').removeClass('active').hide();
+    $newSlide.addClass('active').show();
+    return false;
+});
 
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><center><h6><strong>Doña Paca</strong></h6></center><center><a href=\"https://goo.gl/maps/3QyMYJAqe8Yfa6ca8\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6191691, 28.0498679 ]
-}
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><center><h6><strong>Galaz</strong></h6></center><center><a href=\"https://goo.gl/maps/5DSoHGBzMorZ4p4g9\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.5817765, 28.0172686]
-}
-},{
-"type": "Feature",
-"properties": {
-"description": "<br><h6><center><strong>Pajaritos</strong></center></h6><center><a href=\"https://goo.gl/maps/jSDydBBtD8QyZWSK8\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>","icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [-15.6077651, 28.0362461]
-}
-},
- {
-"type": "Feature",
-"properties": {
-"description": "<br><h6><strong>Fin del Mundo</strong></h6><center><a href=\"https://goo.gl/maps/kdPQpYBqcY7Hw5jNA\" target=\"_blank\" title=\"Opens in a new window\">Ver en googlemaps</a></center>",
-"icon": "circle"
-},
-"geometry": {
-"type": "Point",
-"coordinates": [ -15.6966018,28.060903]
-}
-}]
-}
-},
-"layout": {
-"icon-image": "{icon}-11",
-"icon-allow-overlap": true
-}
-
-});
- 
-// When a click event occurs on a feature in the places layer, open a popup at the
-// location of the feature, with description HTML from its properties.
-map.on('click', 'places', function (e) {
-var coordinates = e.features[0].geometry.coordinates.slice();
-var description = e.features[0].properties.description;
- 
-// Ensure that if the map is zoomed out such that multiple
-// copies of the feature are visible, the popup appears
-// over the copy being pointed to.
-while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-}
- 
-new mapboxgl.Popup()
-.setLngLat(coordinates)
-.setHTML(description)
-.addTo(map);
-});
- 
-// Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'places', function () {
-map.getCanvas().style.cursor = 'pointer';
-});
- 
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'places', function () {
-map.getCanvas().style.cursor = '';
-});
-});
+map.setView([27.9650727,-15.5949767], 10);
 </script>
-
-
-  <!-- Contact -->
-
-  <!-- Call to Action -->
-  <section class="call-to-action text-dark text-center" style="padding-top: 0px;" >
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-8 mx-auto">
-                  <ul class="list-inline mb-0">
-            <h3 class="mb-4"style ="color: #343A40">Síguenos en:</h3>
-          <li class="list-inline-item mr-3">   
-            <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/fenixgrancanaria"" class="fa fa-instagram" style="font-size:48px;color:#343A40"></a>   
-            </li>
-          <li class="list-inline-item mr-3">
-          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/fenixgrancan"" class="fa fa-twitter" style="font-size:48px;color:#343A40"></a>
-            </li>
-
-            <li class="list-inline-item">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Fenix-102362407875246/" class="fa fa-facebook" style="font-size:48px;color:#343A40"></a>
-              </a>
-            </li>
-          </ul><br>
-        </div>
-        <div class="col-xl-8 mx-auto">
-         <h5 class="mb-4" id="contacto">o suscríbete para estar al día y entrarás en el sorteo de material exclusivo Fenix!!</h5>
-         <center>
-        <img src="https://elenacube.s3-eu-west-1.amazonaws.com/media/fenix_merchan_min.webp" alt="" style="width: 70%"> </center><br>
-         <form action="https://gmail.us5.list-manage.com/subscribe/post?u=fea7a8cf3005fc556d73f9315&amp;id=78f85116b2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>  
-          <div class="form-row">
-        <div class="col-xl-6 mx-auto">
-              <div id="mc_embed_signup_scroll">
-
-                <input type="email" value="" name="EMAIL" class="form-control form-control" id="mce-EMAIL" placeholder="Introduce tu correo electrónico..." required>
-              </div><br>
-
-           <div class="col-xl-8 mx-auto">
-               <div class="clear"> <button type="submit" class="btn btn-outline-primary" name="b_fea7a8cf3005fc556d73f9315_78f85116b2" tabindex="-1" value="">Suscríbete!</button></div>
-            </div> 
-
-          </div>  
-
-        </div>
-        </form><br>
-
-  
-        </div>
-      </div>
-    </div><br>
-    
-  </section><br><br>
-
-           
+<!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
-
- <!-- Footer -->
-  <footer class="footer bg" style="background-color: #212528">
-    <div class="container">
-  
-          <p class="text-muted small mb-4 mb-lg-0">&copy; 2019 Parque Forestal CB. Todos los derechos reservados.</p>
-        </div>
-       </div>
-       </div> 
-  </footer>
-  <!-- Custom scripts for this template -->
-  <script src="https://elenacube.s3-eu-west-1.amazonaws.com/static/js/agency.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-<!-- Defer images -->
-<script>
-function init() {
-var imgDefer = document.getElementsByTagName('img');
-for (var i=0; i<imgDefer.length; i++) {
-if(imgDefer[i].getAttribute('data-src')) {
-imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155307635-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-155307635-1');
-</script>
 </html>
-
-
-
