@@ -20,7 +20,7 @@
             <div class="col-6 col-12-medium">
             <span class=""> 
                  {% for About_me in abouts %}
-           <video class="card-img-top"  width="85%" autoplay loop muted controls style="border-radius: 16px;"><source src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/Drone+Cruz+Maria_para+IG.m4v" type="video/mp4" />
+           <video class="card-img-top"  width="50%" autoplay loop muted controls style="border-radius: 16px;"><source src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/Drone+Cruz+Maria_para+IG.m4v" type="video/mp4" />
          </video>
          {% endfor %}</span>
             </div>
@@ -49,7 +49,7 @@
               <p>Tienes a tu disposición un mapa con la localización e información sobre todos las zonas en las que se encuentran nuestros totems.</p>
               <ul class="actions special">
                 <li><a href="{% url 'green:indexmap' %}" class="button">MAPA</a></li>
-              </ul>
+              </ul><br>
             </div>
             <div class="col-4 col-12-medium">
               <span class="image fit"><img src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/comprimido/Blog-min.png" alt="" /></span>
@@ -57,7 +57,7 @@
               <p>En nuestro blog descubre las ultimas novedades. Sube a la cumbre y anímate a colaborar con tu foto en nuestro proyecto.</p>
               <ul class="actions special">
                 <li><a href="{% url 'blog:post_list' %}" class="button">Blog</a></li>
-              </ul>
+              </ul><br>
             </div>
             <div class="col-4 col-12-medium">
               <span class="image fit"><img src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/comprimido/Participa-min.png" alt="" /></span>
@@ -65,7 +65,7 @@
               <p>Tenemos organizado un sorteo en el que conseguirás un regalo dependiendo de la cantidad de fotos que nos hayas facilitado.</p>
               <ul class="actions special">
                 <li><a href="{% url 'green:concurso' %}" class="button">Concurso</a></li>
-              </ul>
+              </ul><br>
             </div>
           </div>
         </div>
