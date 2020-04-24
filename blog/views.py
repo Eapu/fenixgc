@@ -42,7 +42,7 @@ class PostListView(ListView):
         template_name = 'blog/post/list.html'
 
 def post_detail(request, year, month, day, post):
-        abouts = About_me.objects.all()
+        abouts = About_me.published.all()
         titles = Title.objects.all()
         tags = Tag.objects.all()
         post = get_object_or_404(Post, slug=post, status='published')
