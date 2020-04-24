@@ -13,13 +13,16 @@
           </ul>
         </div>
       </section>
-
     <!-- One -->
       <section id="one" class="main style1" style="margin-bottom: 10px">
         <div class="container">
           <div class="row gtr-150">
             <div class="col-6 col-12-medium">
-            <span class=""><video class="card-img-top"  width="85%" autoplay loop muted controls style="border-radius: 20px;"><source src="https://youtu.be/5DWxaXFRKSQ" type="video/mp4" /></video></span>
+            <span class=""> 
+                 {% for About_me in abouts %}
+           <video class="card-img-top"  width="85%" autoplay loop muted controls style="border-radius: 20px;"><source src="https://elenacube.s3-eu-west-1.amazonaws.com/fenix/Drone+Cruz+Maria_para+IG.m4v" type="video/mp4" />
+         </video>
+         {% endfor %}</span>
             </div>
             <div class="col-6 col-12-medium imp-medium">      
              <header class="major">

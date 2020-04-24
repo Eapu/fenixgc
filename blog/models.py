@@ -56,9 +56,19 @@ def __str__(self):
 	return 'Comment by {} on {}'.format(self.name, self.post)
 
 class About_me(models.Model):
+		STATUS_CHOICES = (
+			('draft', 'Draft'),
+			('published', 'Published'),
+			)
 		name = models.CharField(max_length=80)
 		avatar = models.FileField(null=True, blank=True)
 		body = models.TextField(blank=True)
+		video = models.FileField(null=True, blank=True)
+		published = PublishedManager()
+		status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="published")
+
+		class Meta:
+			ordering = ('-publish', )
 
 		class Meta:
 			verbose_name_plural = 'About_me'

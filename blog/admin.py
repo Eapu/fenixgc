@@ -22,9 +22,13 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter = ('active', 'created', 'updated')
     search_fields = ('name', 'body')
 admin.site.register(Comment, CommentAdmin)
+class About_meAdmin(admin.ModelAdmin):
 
-
+    list_display = ('name', 'avatar', 'body', 'video')
+    list_filter = ('name', 'avatar', 'body', 'video')
+    search_fields = ('name', 'avatar', 'body', 'video')
 admin.site.register(About_me)
+
 admin.site.register(Title)
 
 admin.site.register(Post, PostAdmin)

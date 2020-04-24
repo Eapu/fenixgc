@@ -1,16 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import La_Cilla,Degollada_del_Humo,Acusa,Tejeda,Lugarejos,Las_Hoyas,Tamadaba,Pajaritos,Degollada_del_Sargento,Fin_del_Mundo,Cruz_de_Maria,Cuevas_del_Caballero,Fuentefria,Cueva_Corcho,Doña_Paca,Galaz
+from blog.models import About_me
 
 # Create your views here.
 
 def index(request, tag_slug=None):
+             abouts = About_me.published.all()
              posts = La_Cilla.published.all()
              posts9 = Fin_del_Mundo.published.all()
              posts4 = Tejeda.published.all()
              posts8 = Degollada_del_Sargento.published.all() 
 
-             return render(request,'green/index.html',  {'posts': posts,'posts9': posts9,'posts4': posts4,'posts8': posts8})
+             return render(request,'green/index.html',  {'abouts':abouts,'posts': posts,'posts9': posts9,'posts4': posts4,'posts8': posts8})
 def indexmap(request, tag_slug=None):
              posts = La_Cilla.published.all()
              posts9 = Fin_del_Mundo.published.all()
