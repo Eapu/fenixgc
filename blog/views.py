@@ -16,7 +16,7 @@ def post_list(request, tag_slug=None):
              object_list = Post.published.all()
              tag = None
              tags = Tag.objects.all()
-             abouts = About_me.all()
+             abouts = About_me.published.all()
              titles = Title.objects.all()
 
              if tag_slug:
